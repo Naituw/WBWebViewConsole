@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name         = "WBWebViewConsole"
   s.platform     = :ios
   s.version      = "1.0.0"
-  s.summary      = "In app debug console for your iOS app's WebView."
+  s.summary      = "In-App debug console for your UIWebView && WKWebView"
   s.homepage     = "https://github.com/Naituw/WBWebViewConsole"
   s.license      = "MIT"
   s.authors      = {"Naituw" => "naituw@gmail.com"}
