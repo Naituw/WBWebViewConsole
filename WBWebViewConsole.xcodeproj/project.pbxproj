@@ -1,0 +1,638 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4CC06A345E7F6C9699973E16 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9EF876B744447A8DBF1CF8 /* libPods.a */; };
+		C656B6681A8DE08900263FC0 /* WBJSBridgeMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C656B6671A8DE08900263FC0 /* WBJSBridgeMessage.m */; };
+		C6B12C541A8D9CAB004F2AD2 /* libWBWebViewConsole.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B12C481A8D9CAB004F2AD2 /* libWBWebViewConsole.a */; };
+		C6B12C681A8D9D5A004F2AD2 /* WBWebDebugConsoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C671A8D9D5A004F2AD2 /* WBWebDebugConsoleViewController.m */; };
+		C6B12C6F1A8D9D64004F2AD2 /* WBWebViewConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C6A1A8D9D64004F2AD2 /* WBWebViewConsole.m */; };
+		C6B12C701A8D9D64004F2AD2 /* WBWebViewConsoleInputHistoryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C6C1A8D9D64004F2AD2 /* WBWebViewConsoleInputHistoryEntry.m */; };
+		C6B12C711A8D9D64004F2AD2 /* WBWebViewConsoleMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C6E1A8D9D64004F2AD2 /* WBWebViewConsoleMessage.m */; };
+		C6B12C761A8D9D6B004F2AD2 /* WBWebViewConsoleUserPromptCompletionController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C731A8D9D6B004F2AD2 /* WBWebViewConsoleUserPromptCompletionController.m */; };
+		C6B12C771A8D9D6B004F2AD2 /* WBWebViewConsoleUserPromptCompletionDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C751A8D9D6B004F2AD2 /* WBWebViewConsoleUserPromptCompletionDatasource.m */; };
+		C6B12C7E1A8D9D73004F2AD2 /* WBWebViewConsoleInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C791A8D9D73004F2AD2 /* WBWebViewConsoleInputView.m */; };
+		C6B12C7F1A8D9D73004F2AD2 /* WBWebViewConsoleInputViewActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C7B1A8D9D73004F2AD2 /* WBWebViewConsoleInputViewActionButton.m */; };
+		C6B12C801A8D9D73004F2AD2 /* WBWebViewConsoleMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C7D1A8D9D73004F2AD2 /* WBWebViewConsoleMessageCell.m */; };
+		C6B12C831A8D9DC1004F2AD2 /* WBWebBrowserConsole.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C6B12C821A8D9DC1004F2AD2 /* WBWebBrowserConsole.bundle */; };
+		C6B12C871A8D9EE9004F2AD2 /* WBWebViewUserScript.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C861A8D9EE9004F2AD2 /* WBWebViewUserScript.m */; };
+		C6B12C881A8D9EE9004F2AD2 /* WBWebViewUserScript.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C861A8D9EE9004F2AD2 /* WBWebViewUserScript.m */; };
+		C6B12C8C1A8DACEE004F2AD2 /* WBTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C8B1A8DACEE004F2AD2 /* WBTextView.m */; };
+		C6B12C8F1A8DADAB004F2AD2 /* UIDevice+WBTHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C8E1A8DADAB004F2AD2 /* UIDevice+WBTHelpers.m */; };
+		C6B12C921A8DC67D004F2AD2 /* WBKeyboardObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C911A8DC67D004F2AD2 /* WBKeyboardObserver.m */; };
+		C6B12C951A8DC6C5004F2AD2 /* UIColor+WBTHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C941A8DC6C5004F2AD2 /* UIColor+WBTHelpers.m */; };
+		C6B12C991A8DC84E004F2AD2 /* UIScrollView+WBTUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C981A8DC84E004F2AD2 /* UIScrollView+WBTUtilities.m */; };
+		C6B12CD21A8DD1F6004F2AD2 /* WBWebViewJSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12CD11A8DD1F6004F2AD2 /* WBWebViewJSBridge.m */; };
+		C6B12CD61A8DD275004F2AD2 /* WBJSBridgeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12CD51A8DD275004F2AD2 /* WBJSBridgeAction.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C6B12C551A8D9CAB004F2AD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B12C401A8D9CAB004F2AD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6B12C471A8D9CAB004F2AD2;
+			remoteInfo = WBWebViewConsole;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C6B12C461A8D9CAB004F2AD2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1E9EF876B744447A8DBF1CF8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F8EEC49B5777B1BF7725016 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7858147BFF2CF9784421BD09 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C656B6661A8DE08900263FC0 /* WBJSBridgeMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBJSBridgeMessage.h; sourceTree = "<group>"; };
+		C656B6671A8DE08900263FC0 /* WBJSBridgeMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBJSBridgeMessage.m; sourceTree = "<group>"; };
+		C6B12C481A8D9CAB004F2AD2 /* libWBWebViewConsole.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWBWebViewConsole.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6B12C531A8D9CAB004F2AD2 /* WBWebViewConsoleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBWebViewConsoleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6B12C591A8D9CAB004F2AD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6B12C661A8D9D5A004F2AD2 /* WBWebDebugConsoleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBWebDebugConsoleViewController.h; sourceTree = "<group>"; };
+		C6B12C671A8D9D5A004F2AD2 /* WBWebDebugConsoleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWebDebugConsoleViewController.m; sourceTree = "<group>"; };
+		C6B12C691A8D9D64004F2AD2 /* WBWebViewConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBWebViewConsole.h; sourceTree = "<group>"; };
+		C6B12C6A1A8D9D64004F2AD2 /* WBWebViewConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWebViewConsole.m; sourceTree = "<group>"; };
+		C6B12C6B1A8D9D64004F2AD2 /* WBWebViewConsoleInputHistoryEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBWebViewConsoleInputHistoryEntry.h; sourceTree = "<group>"; };
+		C6B12C6C1A8D9D64004F2AD2 /* WBWebViewConsoleInputHistoryEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWebViewConsoleInputHistoryEntry.m; sourceTree = "<group>"; };
+		C6B12C6D1A8D9D64004F2AD2 /* WBWebViewConsoleMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBWebViewConsoleMessage.h; sourceTree = "<group>"; };
+		C6B12C6E1A8D9D64004F2AD2 /* WBWebViewConsoleMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWebViewConsoleMessage.m; sourceTree = "<group>"; };
+		C6B12C721A8D9D6B004F2AD2 /* WBWebViewConsoleUserPromptCompletionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBWebViewConsoleUserPromptCompletionController.h; sourceTree = "<group>"; };
+		C6B12C731A8D9D6B004F2AD2 /* WBWebViewConsoleUserPromptCompletionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWebViewConsoleUserPromptCompletionController.m; sourceTree = "<group>"; };
+		C6B12C741A8D9D6B004F2AD2 /* WBWebViewConsoleUserPromptCompletionDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBWebViewConsoleUserPromptCompletionDatasource.h; sourceTree = "<group>"; };
+		C6B12C751A8D9D6B004F2AD2 /* WBWebViewConsoleUserPromptCompletionDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWebViewConsoleUserPromptCompletionDatasource.m; sourceTree = "<group>"; };
+		C6B12C781A8D9D73004F2AD2 /* WBWebViewConsoleInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBWebViewConsoleInputView.h; sourceTree = "<group>"; };
+		C6B12C791A8D9D73004F2AD2 /* WBWebViewConsoleInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWebViewConsoleInputView.m; sourceTree = "<group>"; };
+		C6B12C7A1A8D9D73004F2AD2 /* WBWebViewConsoleInputViewActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBWebViewConsoleInputViewActionButton.h; sourceTree = "<group>"; };
+		C6B12C7B1A8D9D73004F2AD2 /* WBWebViewConsoleInputViewActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWebViewConsoleInputViewActionButton.m; sourceTree = "<group>"; };
+		C6B12C7C1A8D9D73004F2AD2 /* WBWebViewConsoleMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBWebViewConsoleMessageCell.h; sourceTree = "<group>"; };
+		C6B12C7D1A8D9D73004F2AD2 /* WBWebViewConsoleMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWebViewConsoleMessageCell.m; sourceTree = "<group>"; };
+		C6B12C821A8D9DC1004F2AD2 /* WBWebBrowserConsole.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WBWebBrowserConsole.bundle; sourceTree = "<group>"; };
+		C6B12C851A8D9EE9004F2AD2 /* WBWebViewUserScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBWebViewUserScript.h; sourceTree = "<group>"; };
+		C6B12C861A8D9EE9004F2AD2 /* WBWebViewUserScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWebViewUserScript.m; sourceTree = "<group>"; };
+		C6B12C891A8D9FFB004F2AD2 /* WBWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBWebView.h; sourceTree = "<group>"; };
+		C6B12C8A1A8DACEE004F2AD2 /* WBTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBTextView.h; sourceTree = "<group>"; };
+		C6B12C8B1A8DACEE004F2AD2 /* WBTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBTextView.m; sourceTree = "<group>"; };
+		C6B12C8D1A8DADAB004F2AD2 /* UIDevice+WBTHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+WBTHelpers.h"; sourceTree = "<group>"; };
+		C6B12C8E1A8DADAB004F2AD2 /* UIDevice+WBTHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+WBTHelpers.m"; sourceTree = "<group>"; };
+		C6B12C901A8DC67D004F2AD2 /* WBKeyboardObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBKeyboardObserver.h; sourceTree = "<group>"; };
+		C6B12C911A8DC67D004F2AD2 /* WBKeyboardObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBKeyboardObserver.m; sourceTree = "<group>"; };
+		C6B12C931A8DC6C5004F2AD2 /* UIColor+WBTHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WBTHelpers.h"; sourceTree = "<group>"; };
+		C6B12C941A8DC6C5004F2AD2 /* UIColor+WBTHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WBTHelpers.m"; sourceTree = "<group>"; };
+		C6B12C961A8DC758004F2AD2 /* WBWebViewConsoleDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBWebViewConsoleDefines.h; sourceTree = "<group>"; };
+		C6B12C971A8DC84E004F2AD2 /* UIScrollView+WBTUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+WBTUtilities.h"; sourceTree = "<group>"; };
+		C6B12C981A8DC84E004F2AD2 /* UIScrollView+WBTUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+WBTUtilities.m"; sourceTree = "<group>"; };
+		C6B12CD01A8DD1F6004F2AD2 /* WBWebViewJSBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBWebViewJSBridge.h; sourceTree = "<group>"; };
+		C6B12CD11A8DD1F6004F2AD2 /* WBWebViewJSBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWebViewJSBridge.m; sourceTree = "<group>"; };
+		C6B12CD41A8DD275004F2AD2 /* WBJSBridgeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBJSBridgeAction.h; sourceTree = "<group>"; };
+		C6B12CD51A8DD275004F2AD2 /* WBJSBridgeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBJSBridgeAction.m; sourceTree = "<group>"; };
+		C6B12CDA1A8DD444004F2AD2 /* wbjs.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = wbjs.js; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C6B12C451A8D9CAB004F2AD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC06A345E7F6C9699973E16 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6B12C501A8D9CAB004F2AD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6B12C541A8D9CAB004F2AD2 /* libWBWebViewConsole.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1264F0C1B645C7FD429D8893 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F8EEC49B5777B1BF7725016 /* Pods.debug.xcconfig */,
+				7858147BFF2CF9784421BD09 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B92F54FA988E9E1C5B2DA744 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E9EF876B744447A8DBF1CF8 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6B12C3F1A8D9CAB004F2AD2 = {
+			isa = PBXGroup;
+			children = (
+				C6B12C4A1A8D9CAB004F2AD2 /* WBWebViewConsole */,
+				C6B12C571A8D9CAB004F2AD2 /* WBWebViewConsoleTests */,
+				C6B12C491A8D9CAB004F2AD2 /* Products */,
+				1264F0C1B645C7FD429D8893 /* Pods */,
+				B92F54FA988E9E1C5B2DA744 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C6B12C491A8D9CAB004F2AD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C6B12C481A8D9CAB004F2AD2 /* libWBWebViewConsole.a */,
+				C6B12C531A8D9CAB004F2AD2 /* WBWebViewConsoleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6B12C4A1A8D9CAB004F2AD2 /* WBWebViewConsole */ = {
+			isa = PBXGroup;
+			children = (
+				C6B12C841A8D9DDE004F2AD2 /* Supports */,
+				C6B12C811A8D9D96004F2AD2 /* Resources */,
+				C6B12C641A8D9D22004F2AD2 /* Models */,
+				C6B12C631A8D9D0B004F2AD2 /* Views */,
+				C6B12C621A8D9CF2004F2AD2 /* Controllers */,
+			);
+			path = WBWebViewConsole;
+			sourceTree = "<group>";
+		};
+		C6B12C571A8D9CAB004F2AD2 /* WBWebViewConsoleTests */ = {
+			isa = PBXGroup;
+			children = (
+				C6B12C581A8D9CAB004F2AD2 /* Supporting Files */,
+			);
+			path = WBWebViewConsoleTests;
+			sourceTree = "<group>";
+		};
+		C6B12C581A8D9CAB004F2AD2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C6B12C591A8D9CAB004F2AD2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6B12C621A8D9CF2004F2AD2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6B12C661A8D9D5A004F2AD2 /* WBWebDebugConsoleViewController.h */,
+				C6B12C671A8D9D5A004F2AD2 /* WBWebDebugConsoleViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C6B12C631A8D9D0B004F2AD2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6B12C781A8D9D73004F2AD2 /* WBWebViewConsoleInputView.h */,
+				C6B12C791A8D9D73004F2AD2 /* WBWebViewConsoleInputView.m */,
+				C6B12C7A1A8D9D73004F2AD2 /* WBWebViewConsoleInputViewActionButton.h */,
+				C6B12C7B1A8D9D73004F2AD2 /* WBWebViewConsoleInputViewActionButton.m */,
+				C6B12C7C1A8D9D73004F2AD2 /* WBWebViewConsoleMessageCell.h */,
+				C6B12C7D1A8D9D73004F2AD2 /* WBWebViewConsoleMessageCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C6B12C641A8D9D22004F2AD2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C6B12C691A8D9D64004F2AD2 /* WBWebViewConsole.h */,
+				C6B12C6A1A8D9D64004F2AD2 /* WBWebViewConsole.m */,
+				C6B12C6B1A8D9D64004F2AD2 /* WBWebViewConsoleInputHistoryEntry.h */,
+				C6B12C6C1A8D9D64004F2AD2 /* WBWebViewConsoleInputHistoryEntry.m */,
+				C6B12C6D1A8D9D64004F2AD2 /* WBWebViewConsoleMessage.h */,
+				C6B12C6E1A8D9D64004F2AD2 /* WBWebViewConsoleMessage.m */,
+				C6B12C651A8D9D35004F2AD2 /* UserPrompt */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C6B12C651A8D9D35004F2AD2 /* UserPrompt */ = {
+			isa = PBXGroup;
+			children = (
+				C6B12C721A8D9D6B004F2AD2 /* WBWebViewConsoleUserPromptCompletionController.h */,
+				C6B12C731A8D9D6B004F2AD2 /* WBWebViewConsoleUserPromptCompletionController.m */,
+				C6B12C741A8D9D6B004F2AD2 /* WBWebViewConsoleUserPromptCompletionDatasource.h */,
+				C6B12C751A8D9D6B004F2AD2 /* WBWebViewConsoleUserPromptCompletionDatasource.m */,
+			);
+			path = UserPrompt;
+			sourceTree = "<group>";
+		};
+		C6B12C811A8D9D96004F2AD2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C6B12C821A8D9DC1004F2AD2 /* WBWebBrowserConsole.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C6B12C841A8D9DDE004F2AD2 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				C6B12C961A8DC758004F2AD2 /* WBWebViewConsoleDefines.h */,
+				C6B12CD91A8DD3A0004F2AD2 /* WBWebView */,
+				C6B12C8A1A8DACEE004F2AD2 /* WBTextView.h */,
+				C6B12C8B1A8DACEE004F2AD2 /* WBTextView.m */,
+				C6B12C901A8DC67D004F2AD2 /* WBKeyboardObserver.h */,
+				C6B12C911A8DC67D004F2AD2 /* WBKeyboardObserver.m */,
+				C6B12CD81A8DD305004F2AD2 /* Extensions */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		C6B12CD31A8DD259004F2AD2 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				C6B12CD41A8DD275004F2AD2 /* WBJSBridgeAction.h */,
+				C6B12CD51A8DD275004F2AD2 /* WBJSBridgeAction.m */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		C6B12CD71A8DD278004F2AD2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C6B12CDA1A8DD444004F2AD2 /* wbjs.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C6B12CD81A8DD305004F2AD2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C6B12C8D1A8DADAB004F2AD2 /* UIDevice+WBTHelpers.h */,
+				C6B12C8E1A8DADAB004F2AD2 /* UIDevice+WBTHelpers.m */,
+				C6B12C931A8DC6C5004F2AD2 /* UIColor+WBTHelpers.h */,
+				C6B12C941A8DC6C5004F2AD2 /* UIColor+WBTHelpers.m */,
+				C6B12C971A8DC84E004F2AD2 /* UIScrollView+WBTUtilities.h */,
+				C6B12C981A8DC84E004F2AD2 /* UIScrollView+WBTUtilities.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		C6B12CD91A8DD3A0004F2AD2 /* WBWebView */ = {
+			isa = PBXGroup;
+			children = (
+				C6B12CDB1A8DDCFF004F2AD2 /* JSBridge */,
+				C6B12C851A8D9EE9004F2AD2 /* WBWebViewUserScript.h */,
+				C6B12C861A8D9EE9004F2AD2 /* WBWebViewUserScript.m */,
+				C6B12C891A8D9FFB004F2AD2 /* WBWebView.h */,
+			);
+			path = WBWebView;
+			sourceTree = "<group>";
+		};
+		C6B12CDB1A8DDCFF004F2AD2 /* JSBridge */ = {
+			isa = PBXGroup;
+			children = (
+				C6B12CD01A8DD1F6004F2AD2 /* WBWebViewJSBridge.h */,
+				C6B12CD11A8DD1F6004F2AD2 /* WBWebViewJSBridge.m */,
+				C656B6661A8DE08900263FC0 /* WBJSBridgeMessage.h */,
+				C656B6671A8DE08900263FC0 /* WBJSBridgeMessage.m */,
+				C6B12CD31A8DD259004F2AD2 /* Actions */,
+				C6B12CD71A8DD278004F2AD2 /* Resources */,
+			);
+			path = JSBridge;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C6B12C471A8D9CAB004F2AD2 /* WBWebViewConsole */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6B12C5C1A8D9CAB004F2AD2 /* Build configuration list for PBXNativeTarget "WBWebViewConsole" */;
+			buildPhases = (
+				877C3F73F0CAECCA2A0291BD /* Check Pods Manifest.lock */,
+				C6B12C441A8D9CAB004F2AD2 /* Sources */,
+				C6B12C451A8D9CAB004F2AD2 /* Frameworks */,
+				C6B12C461A8D9CAB004F2AD2 /* CopyFiles */,
+				2D5D604C3937D6C70638BBD1 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WBWebViewConsole;
+			productName = WBWebViewConsole;
+			productReference = C6B12C481A8D9CAB004F2AD2 /* libWBWebViewConsole.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C6B12C521A8D9CAB004F2AD2 /* WBWebViewConsoleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6B12C5F1A8D9CAB004F2AD2 /* Build configuration list for PBXNativeTarget "WBWebViewConsoleTests" */;
+			buildPhases = (
+				C6B12C4F1A8D9CAB004F2AD2 /* Sources */,
+				C6B12C501A8D9CAB004F2AD2 /* Frameworks */,
+				C6B12C511A8D9CAB004F2AD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6B12C561A8D9CAB004F2AD2 /* PBXTargetDependency */,
+			);
+			name = WBWebViewConsoleTests;
+			productName = WBWebViewConsoleTests;
+			productReference = C6B12C531A8D9CAB004F2AD2 /* WBWebViewConsoleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C6B12C401A8D9CAB004F2AD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Sina;
+				TargetAttributes = {
+					C6B12C471A8D9CAB004F2AD2 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					C6B12C521A8D9CAB004F2AD2 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = C6B12C431A8D9CAB004F2AD2 /* Build configuration list for PBXProject "WBWebViewConsole" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C6B12C3F1A8D9CAB004F2AD2;
+			productRefGroup = C6B12C491A8D9CAB004F2AD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6B12C471A8D9CAB004F2AD2 /* WBWebViewConsole */,
+				C6B12C521A8D9CAB004F2AD2 /* WBWebViewConsoleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C6B12C511A8D9CAB004F2AD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6B12C831A8D9DC1004F2AD2 /* WBWebBrowserConsole.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D5D604C3937D6C70638BBD1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		877C3F73F0CAECCA2A0291BD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C6B12C441A8D9CAB004F2AD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6B12C6F1A8D9D64004F2AD2 /* WBWebViewConsole.m in Sources */,
+				C6B12C951A8DC6C5004F2AD2 /* UIColor+WBTHelpers.m in Sources */,
+				C6B12C771A8D9D6B004F2AD2 /* WBWebViewConsoleUserPromptCompletionDatasource.m in Sources */,
+				C6B12C8C1A8DACEE004F2AD2 /* WBTextView.m in Sources */,
+				C6B12C681A8D9D5A004F2AD2 /* WBWebDebugConsoleViewController.m in Sources */,
+				C6B12C711A8D9D64004F2AD2 /* WBWebViewConsoleMessage.m in Sources */,
+				C656B6681A8DE08900263FC0 /* WBJSBridgeMessage.m in Sources */,
+				C6B12C761A8D9D6B004F2AD2 /* WBWebViewConsoleUserPromptCompletionController.m in Sources */,
+				C6B12CD61A8DD275004F2AD2 /* WBJSBridgeAction.m in Sources */,
+				C6B12C801A8D9D73004F2AD2 /* WBWebViewConsoleMessageCell.m in Sources */,
+				C6B12C7E1A8D9D73004F2AD2 /* WBWebViewConsoleInputView.m in Sources */,
+				C6B12C991A8DC84E004F2AD2 /* UIScrollView+WBTUtilities.m in Sources */,
+				C6B12CD21A8DD1F6004F2AD2 /* WBWebViewJSBridge.m in Sources */,
+				C6B12C701A8D9D64004F2AD2 /* WBWebViewConsoleInputHistoryEntry.m in Sources */,
+				C6B12C8F1A8DADAB004F2AD2 /* UIDevice+WBTHelpers.m in Sources */,
+				C6B12C871A8D9EE9004F2AD2 /* WBWebViewUserScript.m in Sources */,
+				C6B12C7F1A8D9D73004F2AD2 /* WBWebViewConsoleInputViewActionButton.m in Sources */,
+				C6B12C921A8DC67D004F2AD2 /* WBKeyboardObserver.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6B12C4F1A8D9CAB004F2AD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6B12C881A8D9EE9004F2AD2 /* WBWebViewUserScript.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C6B12C561A8D9CAB004F2AD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6B12C471A8D9CAB004F2AD2 /* WBWebViewConsole */;
+			targetProxy = C6B12C551A8D9CAB004F2AD2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C6B12C5A1A8D9CAB004F2AD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C6B12C5B1A8D9CAB004F2AD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C6B12C5D1A8D9CAB004F2AD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F8EEC49B5777B1BF7725016 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C6B12C5E1A8D9CAB004F2AD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7858147BFF2CF9784421BD09 /* Pods.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C6B12C601A8D9CAB004F2AD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WBWebViewConsoleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C6B12C611A8D9CAB004F2AD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WBWebViewConsoleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C6B12C431A8D9CAB004F2AD2 /* Build configuration list for PBXProject "WBWebViewConsole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6B12C5A1A8D9CAB004F2AD2 /* Debug */,
+				C6B12C5B1A8D9CAB004F2AD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6B12C5C1A8D9CAB004F2AD2 /* Build configuration list for PBXNativeTarget "WBWebViewConsole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6B12C5D1A8D9CAB004F2AD2 /* Debug */,
+				C6B12C5E1A8D9CAB004F2AD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6B12C5F1A8D9CAB004F2AD2 /* Build configuration list for PBXNativeTarget "WBWebViewConsoleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6B12C601A8D9CAB004F2AD2 /* Debug */,
+				C6B12C611A8D9CAB004F2AD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C6B12C401A8D9CAB004F2AD2 /* Project object */;
+}
