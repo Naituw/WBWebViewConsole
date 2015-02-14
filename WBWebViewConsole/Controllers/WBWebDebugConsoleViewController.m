@@ -28,11 +28,10 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithConsole:(WBWebViewConsole *)console
 {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])
-    {
-        
+    if (self = [self init]) {
+        self.console = console;
     }
     return self;
 }

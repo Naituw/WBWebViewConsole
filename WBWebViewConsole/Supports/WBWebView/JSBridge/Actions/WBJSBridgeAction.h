@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WBJSBridgeMessage.h"
 
-@class WBWebViewJSBridge, WBJSBridgeMessage;
+@class WBWebViewJSBridge;
 
 @interface WBJSBridgeAction : NSObject
 

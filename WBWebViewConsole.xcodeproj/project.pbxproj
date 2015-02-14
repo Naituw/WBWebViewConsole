@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4CC06A345E7F6C9699973E16 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9EF876B744447A8DBF1CF8 /* libPods.a */; };
 		C656B6681A8DE08900263FC0 /* WBJSBridgeMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C656B6671A8DE08900263FC0 /* WBJSBridgeMessage.m */; };
+		C656B6731A8F682C00263FC0 /* WBJSBridgeActionPrivateConsoleLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C656B6721A8F682C00263FC0 /* WBJSBridgeActionPrivateConsoleLog.m */; };
 		C6B12C541A8D9CAB004F2AD2 /* libWBWebViewConsole.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B12C481A8D9CAB004F2AD2 /* libWBWebViewConsole.a */; };
 		C6B12C681A8D9D5A004F2AD2 /* WBWebDebugConsoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C671A8D9D5A004F2AD2 /* WBWebDebugConsoleViewController.m */; };
 		C6B12C6F1A8D9D64004F2AD2 /* WBWebViewConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C6A1A8D9D64004F2AD2 /* WBWebViewConsole.m */; };
@@ -59,6 +60,8 @@
 		7858147BFF2CF9784421BD09 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C656B6661A8DE08900263FC0 /* WBJSBridgeMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBJSBridgeMessage.h; sourceTree = "<group>"; };
 		C656B6671A8DE08900263FC0 /* WBJSBridgeMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBJSBridgeMessage.m; sourceTree = "<group>"; };
+		C656B6711A8F682C00263FC0 /* WBJSBridgeActionPrivateConsoleLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBJSBridgeActionPrivateConsoleLog.h; sourceTree = "<group>"; };
+		C656B6721A8F682C00263FC0 /* WBJSBridgeActionPrivateConsoleLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBJSBridgeActionPrivateConsoleLog.m; sourceTree = "<group>"; };
 		C6B12C481A8D9CAB004F2AD2 /* libWBWebViewConsole.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWBWebViewConsole.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B12C531A8D9CAB004F2AD2 /* WBWebViewConsoleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBWebViewConsoleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B12C591A8D9CAB004F2AD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -218,6 +221,8 @@
 				C6B12C6C1A8D9D64004F2AD2 /* WBWebViewConsoleInputHistoryEntry.m */,
 				C6B12C6D1A8D9D64004F2AD2 /* WBWebViewConsoleMessage.h */,
 				C6B12C6E1A8D9D64004F2AD2 /* WBWebViewConsoleMessage.m */,
+				C656B6711A8F682C00263FC0 /* WBJSBridgeActionPrivateConsoleLog.h */,
+				C656B6721A8F682C00263FC0 /* WBJSBridgeActionPrivateConsoleLog.m */,
 				C6B12C651A8D9D35004F2AD2 /* UserPrompt */,
 			);
 			path = Models;
@@ -436,6 +441,7 @@
 			files = (
 				C6B12C6F1A8D9D64004F2AD2 /* WBWebViewConsole.m in Sources */,
 				C6B12C951A8DC6C5004F2AD2 /* UIColor+WBTHelpers.m in Sources */,
+				C656B6731A8F682C00263FC0 /* WBJSBridgeActionPrivateConsoleLog.m in Sources */,
 				C6B12C771A8D9D6B004F2AD2 /* WBWebViewConsoleUserPromptCompletionDatasource.m in Sources */,
 				C6B12C8C1A8DACEE004F2AD2 /* WBTextView.m in Sources */,
 				C6B12C681A8D9D5A004F2AD2 /* WBWebDebugConsoleViewController.m in Sources */,

@@ -18,6 +18,8 @@ extern NSString * const WBWebViewConsoleLastSelectionElementName;
 
 @interface WBWebViewConsole : NSObject
 
+- (instancetype)initWithWebView:(id<WBWebView>)webView;
+
 - (void)addMessage:(NSString *)message type:(WBWebViewConsoleMessageType)type level:(WBWebViewConsoleMessageLevel)level source:(WBWebViewConsoleMessageSource)source;
 - (void)addMessage:(NSString *)message type:(WBWebViewConsoleMessageType)type level:(WBWebViewConsoleMessageLevel)level source:(WBWebViewConsoleMessageSource)source url:(NSString *)url line:(NSInteger)line column:(NSInteger)column;
 - (void)addMessage:(NSString *)message level:(WBWebViewConsoleMessageLevel)level source:(WBWebViewConsoleMessageSource)source caller:(NSString *)caller;

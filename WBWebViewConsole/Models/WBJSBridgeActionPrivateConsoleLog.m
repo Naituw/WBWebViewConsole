@@ -1,0 +1,89 @@
+//
+//  WBJSBridgeActionPrivateConsoleLog.m
+//  WBWebViewConsole
+//
+//  Created by 吴天 on 2/14/15.
+//  Copyright (c) 2015 Sina. All rights reserved.
+//
+
+#import "WBJSBridgeActionPrivateConsoleLog.h"
+#import "WBWebViewConsole.h"
+#import "WBWebViewJSBridge.h"
+#import "WBWebView.h"
+#import <NSDictionary+Accessors.h>
+
+@implementation WBJSBridgeActionPrivateConsoleLog
+
+- (void)startAction
+{
+    WBWebViewConsole * debugConsole = self.bridge.webView.console;
+    
+    NSDictionary * message = self.message.parameters;
+    
+    NSString * func = [message stringForKey:@"func"];
+    
+    if (!func) func = @"log";
+    
+    NSString * url = [message stringForKey:@"file"];
+    NSInteger line = [message integerForKey:@"lineno"];
+    NSInteger column = [message integerForKey:@"colno"];
+    
+    if ([func isEqual:@"clear"])
+    {
+        [debugConsole addMessage:nil type:WBWebViewConsoleMessageTypeClear level:WBWebViewConsoleMessageLevelInfo source:WBWebViewConsoleMessageSourceJS];
+    }
+    else if ([func isEqual:@"assert"])
+    {
+        NSArray * args = [message arrayForKey:@"args"];
+        id condition = [args firstObject];
+        
+        if ([condition isKindOfClass:[NSNumber class]])
+        {
+            if ([condition boolValue])
+            {
+                return;
+            }
+        }
+        
+        if ([condition isKindOfClass:[NSString class]])
+        {
+            if ([condition length] &&
+                ![condition isEqual:@"false"] &&
+                ![condition isEqual:@"0"] &&
+                ![condition isEqual:@"undefined"] &&
+                ![condition isEqual:@"null"])
+            {
+                return;
+            }
+        }
+        
+        NSString * message = @"断言失败： ";
+        
+        if (args.count > 1)
+        {
+            NSString * reason = [[args subarrayWithRange:NSMakeRange(1, args.count - 1)] componentsJoinedByString:@" "];
+            message = [message stringByAppendingString:reason];
+        }
+        
+        [debugConsole addMessage:message type:WBWebViewConsoleMessageTypeAssert level:WBWebViewConsoleMessageLevelError source:WBWebViewConsoleMessageSourceJS url:url line:line column:column];
+    }
+    else
+    {
+        NSDictionary * levelMap = @{@"warn": @(WBWebViewConsoleMessageLevelWarning),
+                                    @"error": @(WBWebViewConsoleMessageLevelError),
+                                    @"debug": @(WBWebViewConsoleMessageLevelDebug),
+                                    @"info": @(WBWebViewConsoleMessageLevelInfo),
+                                    @"log": @(WBWebViewConsoleMessageLevelLog)};
+        
+        WBWebViewConsoleMessageLevel level = [levelMap[func] integerValue];
+        
+        NSArray * args = [message arrayForKey:@"args"];
+        NSString * string = [args componentsJoinedByString:@" "];
+        
+        [debugConsole addMessage:string type:WBWebViewConsoleMessageTypeLog level:level source:WBWebViewConsoleMessageSourceJS url:url line:line column:column];
+    }
+    
+    [self actionSuccessedWithResult:nil];
+}
+
+@end

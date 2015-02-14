@@ -34,12 +34,12 @@
 
 - (void)actionSuccessedWithResult:(NSDictionary *)result
 {
-    [self.bridge sendCallbackForMessage:self.message success:YES result:result];
+    [self.bridge actionDidFinish:self success:YES result:result];
 }
 
 - (void)actionFailed
 {
-    [self.bridge sendCallbackForMessage:self.message success:NO result:nil];
+    [self.bridge actionDidFinish:self success:NO result:nil];
 }
 
 NSString * const WBJSBridgeActionNamePrefix = @"WBJSBridgeAction";

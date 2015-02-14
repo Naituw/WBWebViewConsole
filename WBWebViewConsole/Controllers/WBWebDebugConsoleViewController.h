@@ -12,6 +12,8 @@
 
 @interface WBWebDebugConsoleViewController : UIViewController
 
+- (instancetype)initWithConsole:(WBWebViewConsole *)console;
+
 @property (nonatomic, strong) WBWebViewConsole * console;
 
 @property (nonatomic, strong) NSString * initialCommand;

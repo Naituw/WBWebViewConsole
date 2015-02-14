@@ -1,11 +1,14 @@
 (function (root, factory) {
-    root["WeiboJSBridge"] = factory();
-
-    var document = root['document'];
-    if (document) {
-        var readyEvent = document.createEvent('Events');
-        readyEvent.initEvent('WeiboJSBridgeReady');
-        document.dispatchEvent(readyEvent);
+    var interface = "WeiboJSBridge";
+    if (!root[interface]) {
+        root[interface] = factory();
+         
+        var document = root['document'];
+        if (document) {
+            var readyEvent = document.createEvent('Events');
+            readyEvent.initEvent('WeiboJSBridgeReady');
+            document.dispatchEvent(readyEvent);
+        }
     }
 } (this, function () {
 

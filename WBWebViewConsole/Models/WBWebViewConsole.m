@@ -11,7 +11,6 @@
 #import "WBWebViewConsoleUserPromptCompletionController.h"
 #import "WBWebView.h"
 #import <JSONKit.h>
-#import <WebViewJavascriptBridge/WebViewJavascriptBridge.h>
 
 NSString * const WBWebViewConsoleDidAddMessageNotification = @"WBWebViewConsoleDidAddMessageNotification";
 NSString * const WBWebViewConsoleDidClearMessagesNotification = @"WBWebViewConsoleDidClearMessagesNotification";
@@ -24,8 +23,6 @@ NSString * const WBWebViewConsoleLastSelectionElementName = @"WeiboConsoleLastSe
 @property (nonatomic, strong) NSMutableArray * consoleClearedMessages;
 
 @property (nonatomic, strong) WBWebViewConsoleUserPromptCompletionController * completionController;
-
-@property (nonatomic, strong) WebViewJavascriptBridge * jsBridge;
 
 @end
 
@@ -41,12 +38,18 @@ NSString * const WBWebViewConsoleLastSelectionElementName = @"WeiboConsoleLastSe
     return self;
 }
 
+- (instancetype)initWithWebView:(id<WBWebView>)webView
+{
+    if (self = [self init]) {
+        self.webView = webView;
+    }
+    return self;
+}
+
 - (void)setWebView:(id<WBWebView>)webView
 {
     if (_webView != webView)
     {
-        self.jsBridge = nil;
-        
         _webView = webView;
         
         if (webView)
@@ -124,7 +127,7 @@ NSString * const WBWebViewConsoleLastSelectionElementName = @"WeiboConsoleLastSe
     NSString * js = [NSString stringWithFormat:@"__WeiboConsoleEvalResult = eval(decodeURIComponent(escape(window.atob('%@'))));", encoded];
     js = [js stringByAppendingString:@"window.__WeiboDebugConsole.stringifyObject(__WeiboConsoleEvalResult);"];
     
-    [self.webView evaluateJavaScript:js completionHandler:^(id result, NSError * error) {
+    [self.webView wb_evaluateJavaScript:js completionHandler:^(id result, NSError * error) {
         
         if (!result) return;
         
@@ -214,7 +217,7 @@ NSString * const WBWebViewConsoleLastSelectionElementName = @"WeiboConsoleLastSe
     NSString * js = [NSString stringWithUTF8String:js_char];
     js = [js stringByAppendingFormat:@"('%@');", WBWebViewConsoleLastSelectionElementName];
     
-    [_webView evaluateJavaScript:js completionHandler:^(id result, NSError * error) {
+    [_webView wb_evaluateJavaScript:js completionHandler:^(id result, NSError * error) {
         BOOL success = NO;
         if ([result respondsToSelector:@selector(boolValue)])
         {
@@ -289,7 +292,9 @@ NSString * const WBWebViewConsoleLastSelectionElementName = @"WeiboConsoleLastSe
             return !isNaN(parseFloat(n)) && isFinite(n);
         }
         function __logWithParams(params) {
-            window.__WeiboJSBridge.invoke('privateConsoleLog', params);
+            if (window.WeiboJSBridge) {
+                window.WeiboJSBridge.invoke('privateConsoleLog', params);
+            }
         }
         function __updateParams(params, error) {
             var stack = error.stack;
@@ -394,7 +399,7 @@ NSString * const WBWebViewConsoleLastSelectionElementName = @"WeiboConsoleLastSe
                     'colno': event.colno,
                     'lineno': event.lineno,
                 };
-                window.__WeiboJSBridge.invoke('privateConsoleLog', params);
+                __logWithParams(params);
             });
         }());
     }());

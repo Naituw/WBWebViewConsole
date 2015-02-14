@@ -10,6 +10,8 @@
 #import "WBWebViewUserScript.h"
 #import "WBWebViewJSBridge.h"
 
+@class WBWebViewConsole;
+
 /**
  *  Abstract version of Weibo's WBWebView
  *  The original one is an auto-switching wrapper of UIWebView & WKWebView
@@ -19,6 +21,7 @@
 
 @required
 @property (nonatomic, strong, readonly) WBWebViewJSBridge * JSBridge;
+@property (nonatomic, strong, readonly) WBWebViewConsole * console;
 
 - (void)wb_evaluateJavaScript:(NSString *)javaScriptString completionHandler:(void (^)(NSString *, NSError *))completionHandler;
 

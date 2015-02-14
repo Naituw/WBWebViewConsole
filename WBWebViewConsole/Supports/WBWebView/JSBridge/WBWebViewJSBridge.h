@@ -19,6 +19,8 @@
 
 - (instancetype)initWithWebView:(id<WBWebView>)webView;
 
+@property (nonatomic, weak, readonly) id<WBWebView> webView;
+
 - (NSString *)javascriptSource;
 
 - (BOOL)handleWebViewRequest:(NSURLRequest *)request;
