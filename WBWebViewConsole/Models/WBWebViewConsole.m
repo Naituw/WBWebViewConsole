@@ -10,6 +10,7 @@
 #import "WBWebViewConsoleMessage.h"
 #import "WBWebViewConsoleUserPromptCompletionController.h"
 #import "WBWebView.h"
+#import "WBWebViewJSBridge.h"
 #import <JSONKit.h>
 
 NSString * const WBWebViewConsoleDidAddMessageNotification = @"WBWebViewConsoleDidAddMessageNotification";
@@ -18,6 +19,8 @@ NSString * const WBWebViewConsoleDidClearMessagesNotification = @"WBWebViewConso
 NSString * const WBWebViewConsoleLastSelectionElementName = @"WeiboConsoleLastSelection";
 
 @interface WBWebViewConsole ()
+
+@property (nonatomic, weak) id<WBWebView> webView;
 
 @property (nonatomic, strong) NSMutableArray * consoleMessages;
 @property (nonatomic, strong) NSMutableArray * consoleClearedMessages;
@@ -54,7 +57,9 @@ NSString * const WBWebViewConsoleLastSelectionElementName = @"WeiboConsoleLastSe
         
         if (webView)
         {
-            [self addUserScriptToWebView:webView];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self addUserScriptToWebView:webView];
+            });
         }
     }
 }
@@ -233,9 +238,8 @@ NSString * const WBWebViewConsoleLastSelectionElementName = @"WeiboConsoleLastSe
 {
 #define QUOTE(...) #__VA_ARGS__
     const char * js_char = \
-    QUOTE(
-          // replace console methods
-          (function () {
+    QUOTE(// replace console methods
+          (function (config) {
         
         if (window.__WeiboDebugConsole) return;
         
@@ -292,8 +296,9 @@ NSString * const WBWebViewConsoleLastSelectionElementName = @"WeiboConsoleLastSe
             return !isNaN(parseFloat(n)) && isFinite(n);
         }
         function __logWithParams(params) {
-            if (window.WeiboJSBridge) {
-                window.WeiboJSBridge.invoke('privateConsoleLog', params);
+            var interfaceName = config && config['bridge'];
+            if (interfaceName && window[interfaceName]) {
+                window[interfaceName].invoke('privateConsoleLog', params);
             }
         }
         function __updateParams(params, error) {
@@ -402,10 +407,19 @@ NSString * const WBWebViewConsoleLastSelectionElementName = @"WeiboConsoleLastSe
                 __logWithParams(params);
             });
         }());
-    }());
-          );
+    }));
 #undef QUOTE
     NSString * js = [NSString stringWithUTF8String:js_char];
+    
+    NSString * interface = self.webView.JSBridge.interfaceName;
+    
+    NSMutableDictionary * config = [NSMutableDictionary dictionary];
+    
+    if (interface) {
+        config[@"bridge"] = interface;
+    }
+    
+    js = [js stringByAppendingFormat:@"(%@)", config.JSONString];
     
     WBWebViewUserScript * script = [WBWebViewUserScript scriptWithSource:js injectionTime:WBUserScriptInjectionTimeAtDocumentStart mainFrameOnly:NO];
     

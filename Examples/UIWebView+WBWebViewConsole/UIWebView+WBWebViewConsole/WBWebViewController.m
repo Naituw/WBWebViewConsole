@@ -26,11 +26,14 @@
     self.title = @"Browser";
     
     self.webView = [[WBUIWebView alloc] initWithFrame:self.view.bounds];
+    self.webView.JSBridge.interfaceName = @"UIWebViewBridge";
+    self.webView.JSBridge.readyEventName = @"UIWebViewBridgeReady";
+    self.webView.JSBridge.invokeScheme = @"uiwebview-bridge://invoke";
     self.webView.wb_delegate = self;
     
     [self.view addSubview:self.webView];
     
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://baidu.com"]]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://apple.com"]]];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Console" style:UIBarButtonItemStylePlain target:self action:@selector(showConsole:)];
 }

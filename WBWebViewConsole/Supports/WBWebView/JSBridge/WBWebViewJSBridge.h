@@ -21,6 +21,10 @@
 
 @property (nonatomic, weak, readonly) id<WBWebView> webView;
 
+@property (nonatomic, copy) NSString * interfaceName;
+@property (nonatomic, copy) NSString * readyEventName;
+@property (nonatomic, copy) NSString * invokeScheme;
+
 - (NSString *)javascriptSource;
 
 - (BOOL)handleWebViewRequest:(NSURLRequest *)request;

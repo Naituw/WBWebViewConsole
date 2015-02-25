@@ -32,7 +32,7 @@ extern NSString * const WBWebViewConsoleLastSelectionElementName;
 @property (nonatomic, strong, readonly) NSArray * messages;
 @property (nonatomic, strong, readonly) NSArray * clearedMessages;
 
-@property (nonatomic, weak) id<WBWebView> webView;
+@property (nonatomic, weak, readonly) id<WBWebView> webView;
 
 - (void)storeCurrentSelectedElementWithCompletion:(void (^)(BOOL success))completion;
 
