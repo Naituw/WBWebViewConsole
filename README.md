@@ -37,6 +37,6 @@ pod 'WBWebViewConsole', '~> 1.0'
 
 ## License
 
-WBWebViewConsole is BSD-licensed. see the `LICENSE` file.
+WBWebViewConsole is BSD-licensed. see the `LICENSE.md` file.
 
 The files in the /Examples directory are licensed under a separate license as specified in `Examples/README.md`.
