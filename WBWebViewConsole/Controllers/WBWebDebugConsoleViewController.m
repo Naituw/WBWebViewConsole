@@ -21,6 +21,7 @@
     } _flags;
 }
 
+@property (nonatomic, strong) WBWebViewConsole * console;
 @property (nonatomic, strong) UITableView * tableView;
 @property (nonatomic, strong) WBWebViewConsoleInputView * inputView;
 

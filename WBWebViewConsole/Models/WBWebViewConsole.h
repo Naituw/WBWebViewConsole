@@ -34,7 +34,7 @@ extern NSString * const WBWebViewConsoleLastSelectionElementName;
 
 @property (nonatomic, weak, readonly) id<WBWebView> webView;
 
-- (void)storeCurrentSelectedElementWithCompletion:(void (^)(BOOL success))completion;
+- (void)storeCurrentSelectedElementToJavaScriptVariable:(NSString *)variable completion:(void (^)(BOOL success))completion;
 
 - (void)fetchSuggestionsForPrompt:(NSString *)prompt cursorIndex:(NSInteger)cursorIndex completion:(void (^)(NSArray * suggestions, NSRange replacementRange))completion;
 

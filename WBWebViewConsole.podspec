@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.version      = "1.0.0"
   s.summary      = "In-App debug console for your UIWebView && WKWebView"
   s.homepage     = "https://github.com/Naituw/WBWebViewConsole"
-  s.license      = "MIT"
+  s.license      = "BSD"
   s.authors      = {"Naituw" => "naituw@gmail.com"}
   s.source       = {:git => "https://github.com/Naituw/WBWebViewConsole.git", :tag => '1.0.0'}
   s.source_files = 'WBWebViewConsole/**/*.{h,m}'

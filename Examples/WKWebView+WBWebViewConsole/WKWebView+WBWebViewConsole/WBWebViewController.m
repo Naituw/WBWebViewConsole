@@ -71,11 +71,13 @@
 
 - (void)webDebugInspectCurrentSelectedElement:(id)sender
 {
-    [self.webView.console storeCurrentSelectedElementWithCompletion:^(BOOL success) {
+    NSString * variable = @"WeiboConsoleLastSelection";
+    
+    [self.webView.console storeCurrentSelectedElementToJavaScriptVariable:variable completion:^(BOOL success) {
         if (success)
         {
             WBWebDebugConsoleViewController * consoleViewController = [[WBWebDebugConsoleViewController alloc] initWithConsole:self.webView.console];
-            consoleViewController.initialCommand = @"WeiboConsoleLastSelection";
+            consoleViewController.initialCommand = variable;
             
             [self.navigationController pushViewController:consoleViewController animated:YES];
         }

@@ -172,7 +172,7 @@ NSString * const WBWebViewConsoleLastSelectionElementName = @"WeiboConsoleLastSe
 
 #pragma mark - Selection
 
-- (void)storeCurrentSelectedElementWithCompletion:(void (^)(BOOL))completion
+- (void)storeCurrentSelectedElementToJavaScriptVariable:(NSString *)variable completion:(void (^)(BOOL success))completion
 {
 #define QUOTE(...) #__VA_ARGS__
     const char * js_char = \
@@ -219,8 +219,10 @@ NSString * const WBWebViewConsoleLastSelectionElementName = @"WeiboConsoleLastSe
     })
     );
 #undef QUOTE
+    variable = variable ? : WBWebViewConsoleLastSelectionElementName;
+    
     NSString * js = [NSString stringWithUTF8String:js_char];
-    js = [js stringByAppendingFormat:@"('%@');", WBWebViewConsoleLastSelectionElementName];
+    js = [js stringByAppendingFormat:@"('%@');", variable];
     
     [_webView wb_evaluateJavaScript:js completionHandler:^(id result, NSError * error) {
         BOOL success = NO;
