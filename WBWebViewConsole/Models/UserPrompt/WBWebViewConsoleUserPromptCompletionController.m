@@ -51,26 +51,6 @@
         return;
     }
     
-//    NSInteger tokenIndex = 0;
-//    NSString * sourceObject = @"window";
-//    NSString * keyword = prompt;
-//    NSInteger lastPeriodIndex = [prompt rangeOfString:@"." options:NSBackwardsSearch].location;
-//    if (lastPeriodIndex != NSNotFound)
-//    {
-//        tokenIndex = lastPeriodIndex + 1;
-//        sourceObject = [prompt substringToIndex:lastPeriodIndex];
-//        keyword = [prompt substringFromIndex:lastPeriodIndex + 1];
-//    }
-//    
-//    if (!sourceObject.length || !keyword.length)
-//    {
-//        failedBlock();
-//        return;
-//    }
-//    
-//    NSString * js = self.js;
-//    js = [js stringByAppendingFormat:@"('%@', '%@');", [[sourceObject dataUsingEncoding:NSUTF8StringEncoding] base64Encoding], [[keyword dataUsingEncoding:NSUTF8StringEncoding] base64Encoding]];
-    
     NSString * js = self.js;
     js = [js stringByAppendingFormat:@"('%@', %ld)", [[prompt dataUsingEncoding:NSUTF8StringEncoding] base64Encoding], (long)cursorIndex];
     

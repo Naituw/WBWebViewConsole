@@ -57,7 +57,7 @@
             }
         }
         
-        NSString * message = @"断言失败： ";
+        NSString * message = NSLocalizedString(@"Assert Failed: ", nil);
         
         if (args.count > 1)
         {
