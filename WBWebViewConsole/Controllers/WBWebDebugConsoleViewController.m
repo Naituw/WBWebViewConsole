@@ -15,6 +15,11 @@
 #import "WBKeyboardObserver.h"
 
 @interface WBWebDebugConsoleViewController () <UITableViewDataSource, UITableViewDelegate, WBWebViewConsoleInputViewDelegate, WBWebViewConsoleMessageCellDelegate>
+{
+    struct {
+        unsigned int viewAppeared: 1;
+    } _flags;
+}
 
 @property (nonatomic, strong) UITableView * tableView;
 @property (nonatomic, strong) WBWebViewConsoleInputView * inputView;
@@ -59,10 +64,6 @@
     [self.inputView setConsole:self.console];
     [self.view addSubview:self.inputView];
     
-//    UIMenuItem * copyToInputViewItem = [[UIMenuItem alloc] initWithTitle:NSLocalizedString(@"Copy to command line", nil) action:@selector(copyToInputView:)];
-//    [[UIMenuController sharedMenuController] setMenuItems:@[copyToInputViewItem]];
-//    [[UIMenuController sharedMenuController] update];
-    
     if (self.initialCommand.length)
     {
         [self.inputView setText:self.initialCommand];
@@ -76,7 +77,23 @@
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [self relayoutViewsAnimated:NO];
+        
+        _flags.viewAppeared = YES;
     });
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        _flags.viewAppeared = NO;
+    });
+}
+
+- (void)dismiss:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void)setConsole:(WBWebViewConsole *)console
@@ -268,7 +285,7 @@
 
 - (void)consoleInputViewHeightChanged:(WBWebViewConsoleInputView *)inputView
 {
-    [self relayoutViewsAnimated:YES];
+    [self relayoutViewsAnimated:_flags.viewAppeared];
 }
 
 - (void)consoleInputViewDidBeginEditing:(WBWebViewConsoleInputView *)inputView

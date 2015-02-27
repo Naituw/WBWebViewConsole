@@ -1,9 +1,9 @@
 //
 //  AppDelegate.m
-//  UIWebView+WBWebViewConsole
+//  WKWebView+WBWebViewConsole
 //
-//  Created by 吴天 on 2/13/15.
-//  Copyright (c) 2015 Sina. All rights reserved.
+//  Created by 吴天 on 15/2/25.
+//  Copyright (c) 2015年 Sina. All rights reserved.
 //
 
 #import "AppDelegate.h"

@@ -61,6 +61,13 @@ NSString * const WBKeyboardObserverFrameDidUpdateNotification = @"WBKeyboardObse
     
     self.frameEnd = [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     self.frameBegin = [[userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    
+    if ([notification.name isEqual:UIKeyboardWillHideNotification]) {
+        CGRect frameEnd = self.frameEnd;
+        frameEnd.origin.y = MAX(self.frameEnd.origin.y, [UIScreen mainScreen].bounds.size.height);
+        self.frameEnd = frameEnd;
+    }
+    
     self.animationDuration = [[userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     self.animationCurve = [[userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue];
     

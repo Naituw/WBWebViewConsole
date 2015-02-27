@@ -1,19 +1,19 @@
 //
 //  WBWebViewController.m
-//  UIWebView+WBWebViewConsole
+//  WKWebView+WBWebViewConsole
 //
 //  Created by 吴天 on 2/13/15.
 //  Copyright (c) 2015 Sina. All rights reserved.
 //
 
 #import "WBWebViewController.h"
-#import "WBUIWebView.h"
+#import "WBWKWebView.h"
 #import <WBWebViewConsole/WBWebViewConsole.h>
 #import <WBWebViewConsole/WBWebDebugConsoleViewController.h>
 
-@interface WBWebViewController () <UIWebViewDelegate>
+@interface WBWebViewController ()
 
-@property (nonatomic, strong) WBUIWebView * webView;
+@property (nonatomic, strong) WBWKWebView * webView;
 
 @end
 
@@ -25,11 +25,10 @@
     
     self.title = @"Browser";
     
-    self.webView = [[WBUIWebView alloc] initWithFrame:self.view.bounds];
-    self.webView.JSBridge.interfaceName = @"UIWebViewBridge";
-    self.webView.JSBridge.readyEventName = @"UIWebViewBridgeReady";
-    self.webView.JSBridge.invokeScheme = @"uiwebview-bridge://invoke";
-    self.webView.wb_delegate = self;
+    self.webView = [[WBWKWebView alloc] initWithFrame:self.view.bounds];
+    self.webView.JSBridge.interfaceName = @"WKWebViewBridge";
+    self.webView.JSBridge.readyEventName = @"WKWebViewBridgeReady";
+    self.webView.JSBridge.invokeScheme = @"wkwebview-bridge://invoke";
     
     [self.view addSubview:self.webView];
     
