@@ -10,7 +10,6 @@
 		4039419448914B0FAB7AE452 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5087825930B4397E5CF587C0 /* libPods.a */; };
 		C66422D41A9DC89F009E2FC8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C66422D31A9DC89F009E2FC8 /* main.m */; };
 		C66422D71A9DC89F009E2FC8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C66422D61A9DC89F009E2FC8 /* AppDelegate.m */; };
-		C66422DA1A9DC89F009E2FC8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66422D91A9DC89F009E2FC8 /* ViewController.m */; };
 		C66422DF1A9DC89F009E2FC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C66422DE1A9DC89F009E2FC8 /* Images.xcassets */; };
 		C66422E21A9DC89F009E2FC8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C66422E01A9DC89F009E2FC8 /* LaunchScreen.xib */; };
 		C66422EE1A9DC89F009E2FC8 /* WKWebView_WBWebViewConsoleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C66422ED1A9DC89F009E2FC8 /* WKWebView_WBWebViewConsoleTests.m */; };
@@ -36,8 +35,6 @@
 		C66422D31A9DC89F009E2FC8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C66422D51A9DC89F009E2FC8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C66422D61A9DC89F009E2FC8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C66422D81A9DC89F009E2FC8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C66422D91A9DC89F009E2FC8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C66422DE1A9DC89F009E2FC8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C66422E11A9DC89F009E2FC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C66422E71A9DC89F009E2FC8 /* WKWebView+WBWebViewConsoleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WKWebView+WBWebViewConsoleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,8 +112,6 @@
 			children = (
 				C66422D51A9DC89F009E2FC8 /* AppDelegate.h */,
 				C66422D61A9DC89F009E2FC8 /* AppDelegate.m */,
-				C66422D81A9DC89F009E2FC8 /* ViewController.h */,
-				C66422D91A9DC89F009E2FC8 /* ViewController.m */,
 				C66422FA1A9DC99B009E2FC8 /* WBWKWebView.h */,
 				C66422FB1A9DC99B009E2FC8 /* WBWKWebView.m */,
 				C66422F71A9DC913009E2FC8 /* WBWebViewController.h */,
@@ -288,7 +283,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C66422DA1A9DC89F009E2FC8 /* ViewController.m in Sources */,
 				C66422FC1A9DC99B009E2FC8 /* WBWKWebView.m in Sources */,
 				C66422D71A9DC89F009E2FC8 /* AppDelegate.m in Sources */,
 				C66422F91A9DC913009E2FC8 /* WBWebViewController.m in Sources */,
