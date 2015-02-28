@@ -2,7 +2,7 @@
 
 WBWebViewConsole is an In-App debug console for your UIWebView && WKWebView
 
-<img src="https://github.com/Naituw/WBWebViewConsole/blob/master/Assets/hero.png" alt="WBWebViewConsole" style="width: 487px;"/>
+<img src="https://github.com/Naituw/WBWebViewConsole/blob/master/Assets/hero.png" alt="WBWebViewConsole" width="487"/>
 
 ## Installation
 
