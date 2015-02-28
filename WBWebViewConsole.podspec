@@ -1,6 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "WBWebViewConsole"
   s.platform     = :ios
+  s.ios.deployment_target = "7.0"
   s.version      = "1.0.0"
   s.summary      = "In-App debug console for your UIWebView && WKWebView"
   s.homepage     = "https://github.com/Naituw/WBWebViewConsole"
