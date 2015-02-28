@@ -2,6 +2,8 @@
 
 WBWebViewConsole is an In-App debug console for your UIWebView && WKWebView
 
+![WBWebViewConsole](https://github.com/Naituw/WBWebViewConsole/blob/master/Assets/hero.png)
+
 ## Installation
 
 WBWebViewConsole is available on [CocoaPods](http://cocoapods.org). Just add the following to your project Podfile:
