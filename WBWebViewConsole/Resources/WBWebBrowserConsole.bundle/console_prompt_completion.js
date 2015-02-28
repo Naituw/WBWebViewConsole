@@ -1,7 +1,11 @@
 /*
- * Copyright (C) 2015 Weibo Corp. All rights reserved.
+ *  Copyright (c) 2014-present, Weibo, Corp.
+ *  All rights reserved.
  *
- * Written based on WebKit's CodeMirrorCompletionController.js
+ *  This source code is licensed under the BSD-style license found in the
+ *  LICENSE file in the root directory of this source tree.
+ *
+ *  This file is written based on WebKit's CodeMirrorCompletionController.js
  *
  * Copyright (C) 2013 Apple Inc. All rights reserved.
  *

@@ -104,7 +104,6 @@
 		C6B12CD11A8DD1F6004F2AD2 /* WBWebViewJSBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWebViewJSBridge.m; sourceTree = "<group>"; };
 		C6B12CD41A8DD275004F2AD2 /* WBJSBridgeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBJSBridgeAction.h; sourceTree = "<group>"; };
 		C6B12CD51A8DD275004F2AD2 /* WBJSBridgeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBJSBridgeAction.m; sourceTree = "<group>"; };
-		C6B12CDA1A8DD444004F2AD2 /* wbjs.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = wbjs.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,7 +275,6 @@
 			isa = PBXGroup;
 			children = (
 				C608C5751AA04C450089301B /* WBWebBrowserJSBridge.bundle */,
-				C6B12CDA1A8DD444004F2AD2 /* wbjs.js */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
