@@ -1,4 +1,4 @@
-platform :ios, '7.0'
+platform :ios, '6.0'
 
 pod 'JSONKit-NoWarning', '~> 1.2'
 pod 'UIView+Positioning', '~> 1.1'
