@@ -12,6 +12,12 @@ WBWebViewConsole is available on [CocoaPods](http://cocoapods.org). Just add the
 pod 'WBWebViewConsole', '~> 1.0' 
 ```
 
+Bugs are first fixed in master and then made available via a designated release. If you tend to live on the bleeding edge, you can use WBWebViewConsole from master with the following Podfile entry:
+
+```
+pod 'WBWebViewConsole', :git => 'https://github.com/Naituw/WBWebViewConsole.git'
+```
+
 ## Setup
 
 - Make your own `UIWebView` or `WKWebView` subclass, and implements all methods in `WBWebView` protocol
