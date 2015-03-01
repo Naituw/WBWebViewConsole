@@ -23,7 +23,6 @@
 		C6B12C801A8D9D73004F2AD2 /* WBWebViewConsoleMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C7D1A8D9D73004F2AD2 /* WBWebViewConsoleMessageCell.m */; };
 		C6B12C831A8D9DC1004F2AD2 /* WBWebBrowserConsole.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C6B12C821A8D9DC1004F2AD2 /* WBWebBrowserConsole.bundle */; };
 		C6B12C871A8D9EE9004F2AD2 /* WBWebViewUserScript.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C861A8D9EE9004F2AD2 /* WBWebViewUserScript.m */; };
-		C6B12C881A8D9EE9004F2AD2 /* WBWebViewUserScript.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C861A8D9EE9004F2AD2 /* WBWebViewUserScript.m */; };
 		C6B12C8C1A8DACEE004F2AD2 /* WBTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C8B1A8DACEE004F2AD2 /* WBTextView.m */; };
 		C6B12C8F1A8DADAB004F2AD2 /* UIDevice+WBTHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C8E1A8DADAB004F2AD2 /* UIDevice+WBTHelpers.m */; };
 		C6B12C921A8DC67D004F2AD2 /* WBKeyboardObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C911A8DC67D004F2AD2 /* WBKeyboardObserver.m */; };
@@ -31,6 +30,8 @@
 		C6B12C991A8DC84E004F2AD2 /* UIScrollView+WBTUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C981A8DC84E004F2AD2 /* UIScrollView+WBTUtilities.m */; };
 		C6B12CD21A8DD1F6004F2AD2 /* WBWebViewJSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12CD11A8DD1F6004F2AD2 /* WBWebViewJSBridge.m */; };
 		C6B12CD61A8DD275004F2AD2 /* WBJSBridgeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12CD51A8DD275004F2AD2 /* WBJSBridgeAction.m */; };
+		C6CC9FC81AA36C9A00518B58 /* WBWebViewJSBridgeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CC9FC71AA36C9A00518B58 /* WBWebViewJSBridgeTests.m */; };
+		C6CC9FCC1AA36D0200518B58 /* WBTestsUIWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CC9FCB1AA36D0200518B58 /* WBTestsUIWebView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,9 @@
 		C6B12CD11A8DD1F6004F2AD2 /* WBWebViewJSBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWebViewJSBridge.m; sourceTree = "<group>"; };
 		C6B12CD41A8DD275004F2AD2 /* WBJSBridgeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBJSBridgeAction.h; sourceTree = "<group>"; };
 		C6B12CD51A8DD275004F2AD2 /* WBJSBridgeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBJSBridgeAction.m; sourceTree = "<group>"; };
+		C6CC9FC71AA36C9A00518B58 /* WBWebViewJSBridgeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWebViewJSBridgeTests.m; sourceTree = "<group>"; };
+		C6CC9FCA1AA36D0200518B58 /* WBTestsUIWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBTestsUIWebView.h; sourceTree = "<group>"; };
+		C6CC9FCB1AA36D0200518B58 /* WBTestsUIWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBTestsUIWebView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +182,9 @@
 		C6B12C571A8D9CAB004F2AD2 /* WBWebViewConsoleTests */ = {
 			isa = PBXGroup;
 			children = (
+				C6CC9FC91AA36C9F00518B58 /* Base */,
 				C6B12C581A8D9CAB004F2AD2 /* Supporting Files */,
+				C6CC9FC71AA36C9A00518B58 /* WBWebViewJSBridgeTests.m */,
 			);
 			path = WBWebViewConsoleTests;
 			sourceTree = "<group>";
@@ -314,6 +320,15 @@
 				C6B12CD71A8DD278004F2AD2 /* Resources */,
 			);
 			path = JSBridge;
+			sourceTree = "<group>";
+		};
+		C6CC9FC91AA36C9F00518B58 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C6CC9FCA1AA36D0200518B58 /* WBTestsUIWebView.h */,
+				C6CC9FCB1AA36D0200518B58 /* WBTestsUIWebView.m */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,7 +482,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6B12C881A8D9EE9004F2AD2 /* WBWebViewUserScript.m in Sources */,
+				C6CC9FC81AA36C9A00518B58 /* WBWebViewJSBridgeTests.m in Sources */,
+				C6CC9FCC1AA36D0200518B58 /* WBTestsUIWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +598,7 @@
 		};
 		C6B12C601A8D9CAB004F2AD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F8EEC49B5777B1BF7725016 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -599,6 +616,7 @@
 		};
 		C6B12C611A8D9CAB004F2AD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7858147BFF2CF9784421BD09 /* Pods.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

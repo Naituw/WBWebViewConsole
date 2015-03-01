@@ -2,7 +2,7 @@ PODS:
   - JSONKit-NoWarning (1.2)
   - NSDictionary+Accessors (1.0.0)
   - UIView+Positioning (1.1)
-  - WBWebViewConsole (1.0.0):
+  - WBWebViewConsole (1.0.1):
     - JSONKit-NoWarning (~> 1.2)
     - NSDictionary+Accessors (~> 1.0)
     - UIView+Positioning (~> 1.1)
@@ -18,6 +18,6 @@ SPEC CHECKSUMS:
   JSONKit-NoWarning: fc8d6dd8ec65e303867d1bd274632fc60a4a8ab9
   NSDictionary+Accessors: 7bb473f1258ca37aef786c8d4f70f7880d2e9887
   UIView+Positioning: a6265459fffba45e86d321aff09d4a0d92e5df06
-  WBWebViewConsole: 17f03c90bfb73ac472f3dbcf9c38d79db7fd2448
+  WBWebViewConsole: 40ee333bf04d75fa47d86f4faf1c1ce0ec387bfb
 
 COCOAPODS: 0.35.0

@@ -123,7 +123,7 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
 #if !WBUIWebViewUsesPrivateAPI
-    [self injectUserScript];
+    [self injectUserScripts];
 #endif
     
     if (_delegateHas.didFinishLoad) {

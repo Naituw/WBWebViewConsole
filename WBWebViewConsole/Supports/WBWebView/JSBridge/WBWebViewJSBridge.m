@@ -80,7 +80,7 @@
 {
     if (!_javascriptSource || _flags.sourceNeedsUpdate) {
         
-        NSBundle * bundle = [NSBundle bundleWithPath:[NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] bundlePath], @"WBWebBrowserJSBridge.bundle"]];
+        NSBundle * bundle = [NSBundle bundleWithPath:[NSString stringWithFormat:@"%@/%@", [[NSBundle bundleForClass:[self class]] bundlePath], @"WBWebBrowserJSBridge.bundle"]];
         
         _javascriptSource = [[NSString alloc] initWithContentsOfFile:[bundle pathForResource:@"wbjs" ofType:@"js"] encoding:NSUTF8StringEncoding error:NULL];
         NSAssert(_interfaceName, @"interfaceName must not nil");

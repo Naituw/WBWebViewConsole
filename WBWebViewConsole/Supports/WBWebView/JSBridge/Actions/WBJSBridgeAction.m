@@ -56,8 +56,7 @@ NSString * const WBJSBridgeActionNamePrefix = @"WBJSBridgeAction";
     NSString * actionClassName = [NSString stringWithFormat:@"%@%@", WBJSBridgeActionNamePrefix, actionName];
     Class klass = NSClassFromString(actionClassName);
     
-    if (klass && [klass isSubclassOfClass:[WBJSBridgeAction class]])
-    {
+    if (klass && [klass isSubclassOfClass:[WBJSBridgeAction class]]) {
         return klass;
     }
     
