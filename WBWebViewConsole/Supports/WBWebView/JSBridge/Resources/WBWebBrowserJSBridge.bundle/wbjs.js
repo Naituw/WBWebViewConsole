@@ -74,10 +74,12 @@
 
                 var callback = _callbacks[callbackID];
 
-                var params = message.params;
-                var success = !message.failed;
-
-                callback(params, success);
+                if (callback) {
+                    var params = message.params;
+                    var success = !message.failed;
+                   
+                    callback(params, success);
+                }
             }
         };
 
