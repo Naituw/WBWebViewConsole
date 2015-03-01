@@ -108,6 +108,7 @@
     }
 
     if (action) {
+        [_actions addObject:action];
         [action startAction];
     } else {
         [self sendCallbackForMessage:message success:NO result:nil];
