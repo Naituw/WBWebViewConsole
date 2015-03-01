@@ -73,6 +73,9 @@
                 }
 
                 var callback = _callbacks[callbackID];
+                if (!callback) {
+                    return;
+                }
 
                 var params = message.params;
                 var success = !message.failed;
