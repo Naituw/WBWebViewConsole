@@ -224,6 +224,7 @@ NSString * const WBWebViewConsoleLastSelectionElementName = @"WeiboConsoleLastSe
     })
     );
 #undef QUOTE
+    
     variable = variable ? : WBWebViewConsoleLastSelectionElementName;
     
     NSString * js = [NSString stringWithUTF8String:js_char];
@@ -416,6 +417,7 @@ NSString * const WBWebViewConsoleLastSelectionElementName = @"WeiboConsoleLastSe
         }());
     }));
 #undef QUOTE
+    
     NSString * js = [NSString stringWithUTF8String:js_char];
     
     NSString * interface = self.webView.JSBridge.interfaceName;

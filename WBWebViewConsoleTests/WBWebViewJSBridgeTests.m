@@ -47,8 +47,7 @@ NSString * const WBJSBridgeFinishTestsNotification = @"WBJSBridgeFinishTestsNoti
 - (void)testJSBridgeInvokeAndCallback
 {
 #define QUOTE(...) #__VA_ARGS__
-    const char * html_char = \
-    QUOTE(
+    const char * html_char = QUOTE(
 <!DOCTYPE html>
 <html>
     <body>
@@ -87,6 +86,7 @@ NSString * const WBJSBridgeFinishTestsNotification = @"WBJSBridgeFinishTestsNoti
         }
     </script>
 </html>);
+#undef QUOTE
     
     NSString * html = [NSString stringWithUTF8String:html_char];
     
