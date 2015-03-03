@@ -1,0 +1,3 @@
+language: objective-c
+xcode_workspace: WBWebViewConsole.xcworkspace
+xcode_scheme: WBWebViewConsole
