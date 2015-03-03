@@ -16,7 +16,7 @@
 #import "WBWebViewConsoleUserPromptCompletionController.h"
 #import "WBWebView.h"
 #import "WBWebViewJSBridge.h"
-#import <JSONKit.h>
+#import "NSObject+WBJSONKit.h"
 
 NSString * const WBWebViewConsoleDidAddMessageNotification = @"WBWebViewConsoleDidAddMessageNotification";
 NSString * const WBWebViewConsoleDidClearMessagesNotification = @"WBWebViewConsoleDidClearMessagesNotification";
@@ -144,7 +144,7 @@ NSString * const WBWebViewConsoleLastSelectionElementName = @"WeiboConsoleLastSe
         NSString * string = result;
         if (![string isKindOfClass:[NSString class]])
         {
-            string = [result JSONString];
+            string = [result wb_JSONString];
         }
         
         if ([string isKindOfClass:[NSString class]] && string.length)
@@ -428,7 +428,7 @@ NSString * const WBWebViewConsoleLastSelectionElementName = @"WeiboConsoleLastSe
         config[@"bridge"] = interface;
     }
     
-    js = [js stringByAppendingFormat:@"(%@)", config.JSONString];
+    js = [js stringByAppendingFormat:@"(%@)", config.wb_JSONString];
     
     WBWebViewUserScript * script = [WBWebViewUserScript scriptWithSource:js injectionTime:WBUserScriptInjectionTimeAtDocumentStart mainFrameOnly:NO];
     

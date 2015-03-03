@@ -13,7 +13,7 @@
 
 #import "WBTextView.h"
 #import "UIDevice+WBTHelpers.h"
-#import <UIView+Positioning.h>
+#import "UIView+WBTSizes.h"
 
 @interface WBTextView ()
 {
@@ -182,7 +182,7 @@
         [self bringSubviewToFront:placeHolderLabel];
         placeHolderLabel.userInteractionEnabled = NO;
         placeHolderLabel.frame = CGRectMake(5 + (WBAvalibleOS(7)?0:5), 8, self.bounds.size.width - (5 + (WBAvalibleOS(7)?0:5))*2, 50);
-        placeHolderLabel.height = [placeHolderLabel.text sizeWithFont:placeHolderLabel.font constrainedToSize:CGSizeMake(placeHolderLabel.width, 1000)].height;
+        placeHolderLabel.wbtHeight = [placeHolderLabel.text sizeWithFont:placeHolderLabel.font constrainedToSize:CGSizeMake(placeHolderLabel.wbtWidth, 1000)].height;
     } else {
         placeHolderLabel.hidden = YES;
     }
@@ -307,7 +307,7 @@
     {
         [_textDelegate textView:self willChangeHeight:newSizeH];
     }
-    self.height = newSizeH;
+    self.wbtHeight = newSizeH;
 }
 
 - (void)textViewDidChangeSize

@@ -1,16 +1,10 @@
 PODS:
-  - JSONKit-NoWarning (1.2)
   - NSDictionary+Accessors (1.0.0)
-  - UIView+Positioning (1.1)
 
 DEPENDENCIES:
-  - JSONKit-NoWarning (~> 1.2)
   - NSDictionary+Accessors (~> 1.0)
-  - UIView+Positioning (~> 1.1)
 
 SPEC CHECKSUMS:
-  JSONKit-NoWarning: fc8d6dd8ec65e303867d1bd274632fc60a4a8ab9
   NSDictionary+Accessors: 7bb473f1258ca37aef786c8d4f70f7880d2e9887
-  UIView+Positioning: a6265459fffba45e86d321aff09d4a0d92e5df06
 
 COCOAPODS: 0.35.0

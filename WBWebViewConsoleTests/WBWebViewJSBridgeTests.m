@@ -15,7 +15,7 @@
 #import <XCTest/XCTest.h>
 #import "WBTestsUIWebView.h"
 #import "WBJSBridgeAction.h"
-#import <JSONKit.h>
+#import "NSObject+WBJSONKit.h"
 
 NSString * const WBJSBridgeFinishTestsNotification = @"WBJSBridgeFinishTestsNotification";
 
@@ -100,7 +100,7 @@ NSString * const WBJSBridgeFinishTestsNotification = @"WBJSBridgeFinishTestsNoti
     [self expectationForNotification:WBJSBridgeFinishTestsNotification object:webView.JSBridge handler:^BOOL(NSNotification *notification) {
 
         NSString * errorJSON = [webView stringByEvaluatingJavaScriptFromString:@"JSON.stringify(window.jserrors)"];
-        NSArray * errors = [errorJSON objectFromJSONString];
+        NSArray * errors = [errorJSON wb_objectFromJSONString];
         XCTAssertFalse(errors.count, @"errors: %@", errors);
 
         XCTAssertEqualObjects(notification.userInfo[@"value"], @"weibo.cn"); // see -[WBJSBridgeActionGetValueTests startAction]

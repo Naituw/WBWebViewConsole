@@ -16,7 +16,7 @@
 #import "WBWebViewConsoleMessageCell.h"
 #import "WBWebViewConsoleInputView.h"
 #import "UIScrollView+WBTUtilities.h"
-#import <UIView+Positioning.h>
+#import "UIView+WBTSizes.h"
 #import "WBKeyboardObserver.h"
 
 @interface WBWebDebugConsoleViewController () <UITableViewDataSource, UITableViewDelegate, WBWebViewConsoleInputViewDelegate, WBWebViewConsoleMessageCellDelegate>
@@ -140,8 +140,8 @@
         [UIView setAnimationDuration:keyboard.animationDuration ? : 0.15];
     }
     
-    self.inputView.frame = CGRectMake(0, self.view.height - inputViewHeight - keyboardHeight, self.view.width, inputViewHeight);
-    self.tableView.frame = CGRectMake(0, 0, self.view.width, self.view.height - inputViewHeight - keyboardHeight);
+    self.inputView.frame = CGRectMake(0, self.view.wbtHeight - inputViewHeight - keyboardHeight, self.view.wbtWidth, inputViewHeight);
+    self.tableView.frame = CGRectMake(0, 0, self.view.wbtWidth, self.view.wbtHeight - inputViewHeight - keyboardHeight);
     
     if (animated)
     {

@@ -15,7 +15,7 @@
 #import "WBWebViewConsoleMessageCell.h"
 #import "WBWebViewConsoleInputView.h"
 #import "UIColor+WBTHelpers.h"
-#import <UIView+Positioning.h>
+#import "UIView+WBTSizes.h"
 
 @interface WBWebViewConsoleUserPromptCompletionCell : UITableViewCell
 
@@ -88,7 +88,7 @@
     [super layoutSubviews];
     
     self.textLabel.backgroundColor = [UIColor clearColor];
-    self.textLabel.frame = CGRectMake(30, 0, self.width - 40, self.height);
+    self.textLabel.frame = CGRectMake(30, 0, self.wbtWidth - 40, self.wbtHeight);
 }
 
 - (void)setSuggestion:(NSString *)suggestion
