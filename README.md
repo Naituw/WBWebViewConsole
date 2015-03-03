@@ -20,11 +20,11 @@ pod 'WBWebViewConsole', :git => 'https://github.com/Naituw/WBWebViewConsole.git'
 
 ## Setup
 
-- Make your own `UIWebView` or `WKWebView` subclass, and implements all methods in `WBWebView` protocol
+- Make your own `UIWebView` or `WKWebView` subclass, and implement all methods in `WBWebView` protocol
 - Setup `JSBridge` and `console` when WebView inits
 - If you are using `UIWebView`, inject userScript as early as possible after page loading. Otherwise, just use `WKUserScript` to implement.
 - In `UIWebView`'s `webView:shouldStartLoadWithRequest:navigationType` or `WKWebView`'s `webView:decidePolicyForNavigationAction:decisionHandler`
-  - Pass the request to `-[JSBridge handleWebViewRequest:]` and use the return value to decide wether the navigation should start
+  - Pass the request to `-[JSBridge handleWebViewRequest:]` and use the return value to decide whether the navigation should start
 
 ## Usage
 
