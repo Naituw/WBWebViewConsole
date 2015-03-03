@@ -1,3 +1,11 @@
 language: objective-c
+before_install:
+  - brew update
+  - brew reinstall xctool
+  - gem update cocoapods
 xcode_workspace: WBWebViewConsole.xcworkspace
 xcode_scheme: WBWebViewConsole
+xcode_sdk:
+  - iphonesimulator7.0
+  - iphonesimulator7.1
+  - iphonesimulator8.1
