@@ -13,7 +13,7 @@
 
 #import "WBWebViewConsoleInputViewActionButton.h"
 #import "UIColor+WBTHelpers.h"
-#import <UIView+Positioning.h>
+#import "UIView+WBTSizes.h"
 
 @interface WBWebViewConsoleInputActionPanel : UIImageView
 
@@ -126,8 +126,8 @@
     if (!self.actionPanel.superview)
     {
         CGRect frame = CGRectMake(0, 0, 140, 198);
-        frame.origin.x = self.width - frame.size.width + 5;
-        frame.origin.y = self.height - frame.size.height + 10;
+        frame.origin.x = self.wbtWidth - frame.size.width + 5;
+        frame.origin.y = self.wbtHeight - frame.size.height + 10;
         
         frame = [self.window convertRect:frame fromView:self];
         
@@ -229,7 +229,7 @@
 {
     [self layoutSubviews];
     
-    CGFloat width = self.buttonContainerView.width;
+    CGFloat width = self.buttonContainerView.wbtWidth;
     CGFloat height = 36;
     CGFloat baseY = 0;
     
@@ -314,7 +314,7 @@
     
     CGFloat height = 1 / [UIScreen mainScreen].scale;
     
-    self.seperatorView.frame = CGRectMake(0, self.height - height, self.width, height);
+    self.seperatorView.frame = CGRectMake(0, self.wbtHeight - height, self.wbtWidth, height);
 }
 
 - (void)setHighlighted:(BOOL)highlighted

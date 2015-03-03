@@ -15,7 +15,7 @@
 #import "WBWebViewConsoleMessage.h"
 #import "UIDevice+WBTHelpers.h"
 #import "UIColor+WBTHelpers.h"
-#import <UIView+Positioning.h>
+#import "UIView+WBTSizes.h"
 
 @interface WBWebViewConsoleMessageCell ()
 
@@ -42,7 +42,7 @@
         self.messageLabel.textColor = [UIColor blackColor];
         self.messageLabel.backgroundColor = [UIColor clearColor];
         self.messageLabel.numberOfLines = 0;
-        self.messageLabel.width = [UIScreen mainScreen].bounds.size.width - 40;
+        self.messageLabel.wbtWidth = [UIScreen mainScreen].bounds.size.width - 40;
 //        self.messageLabel.lineBreakMode = NSLineBreakByCharWrapping;
         
         [self.contentView addSubview:self.messageLabel];
@@ -57,7 +57,7 @@
         self.callerLabel.font = [[self class] messageFont];
         self.callerLabel.backgroundColor = [UIColor clearColor];
         self.callerLabel.numberOfLines = 0;
-        self.callerLabel.width = [UIScreen mainScreen].bounds.size.width - 40;
+        self.callerLabel.wbtWidth = [UIScreen mainScreen].bounds.size.width - 40;
 //        self.callerLabel.lineBreakMode = NSLineBreakByCharWrapping;
         
         [self.contentView addSubview:self.callerLabel];
@@ -113,8 +113,8 @@
 {
     [super layoutSubviews];
     
-    self.messageLabel.frame = CGRectMake(30, 5, self.frame.size.width - 40, self.messageLabel.height);
-    self.callerLabel.frame = CGRectMake(30, self.messageLabel.bottom + 2, self.frame.size.width - 40, self.callerLabel.height);
+    self.messageLabel.frame = CGRectMake(30, 5, self.frame.size.width - 40, self.messageLabel.wbtHeight);
+    self.callerLabel.frame = CGRectMake(30, self.messageLabel.wbtBottom + 2, self.frame.size.width - 40, self.callerLabel.wbtHeight);
     self.iconImageView.frame = CGRectMake(0, 0, 30, 24);
 }
 

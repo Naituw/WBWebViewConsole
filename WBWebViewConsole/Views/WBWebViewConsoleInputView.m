@@ -17,7 +17,7 @@
 #import "WBWebViewConsoleInputHistoryEntry.h"
 #import "WBWebViewConsoleInputViewActionButton.h"
 #import "UIDevice+WBTHelpers.h"
-#import <UIView+Positioning.h>
+#import "UIView+WBTSizes.h"
 
 NSUInteger const WBWebViewConsoleInputMaxHistorySize = 30;
 
@@ -104,12 +104,12 @@ NSUInteger const WBWebViewConsoleInputMaxHistorySize = 30;
     [super layoutSubviews];
     
     self.iconImageView.frame = CGRectMake(0, 0, 30, 36);
-    self.topBorderView.frame = CGRectMake(0, 0, self.width, 1.f / [UIScreen mainScreen].scale);
+    self.topBorderView.frame = CGRectMake(0, 0, self.wbtWidth, 1.f / [UIScreen mainScreen].scale);
     
     CGFloat actionWidth = 40;
-    self.actionButton.frame = CGRectMake(self.width - actionWidth, self.height - 36, actionWidth, 36);
+    self.actionButton.frame = CGRectMake(self.wbtWidth - actionWidth, self.wbtHeight - 36, actionWidth, 36);
     
-    self.textView.frame = CGRectMake(25, 4, self.width - actionWidth - 25, self.height - 8);
+    self.textView.frame = CGRectMake(25, 4, self.wbtWidth - actionWidth - 25, self.wbtHeight - 8);
 }
 
 - (void)setFont:(UIFont *)font
@@ -129,7 +129,7 @@ NSUInteger const WBWebViewConsoleInputMaxHistorySize = 30;
 
 - (CGFloat)desiredHeight
 {
-    CGFloat height = self.textView.height + 8;
+    CGFloat height = self.textView.wbtHeight + 8;
     
     height = MAX(height, 36);
     

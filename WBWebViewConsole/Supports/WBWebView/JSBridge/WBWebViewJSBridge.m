@@ -16,7 +16,7 @@
 #import "WBWebViewUserScript.h"
 #import "WBJSBridgeMessage.h"
 #import "WBJSBridgeAction.h"
-#import <JSONKit.h>
+#import "NSObject+WBJSONKit.h"
 
 @interface WBWebViewJSBridge ()
 {
@@ -90,7 +90,7 @@
         NSDictionary * config = @{@"interface": _interfaceName,
                                   @"readyEvent": _readyEventName,
                                   @"invokeScheme": _invokeScheme};
-        NSString * json = [config JSONString];
+        NSString * json = [config wb_JSONString];
         _javascriptSource = [_javascriptSource stringByAppendingFormat:@"(%@)", json];
     }
     return _javascriptSource;
@@ -140,7 +140,7 @@
     NSDictionary * callback = @{@"params": result ? : @{},
                                 @"failed": @(!success),
                                 @"callback_id": message.callbackID};
-    NSString * js = [NSString stringWithFormat:@"%@._handleMessage(%@)", _interfaceName, callback.JSONString];
+    NSString * js = [NSString stringWithFormat:@"%@._handleMessage(%@)", _interfaceName, callback.wb_JSONString];
     [self.webView wb_evaluateJavaScript:js completionHandler:NULL];
 }
 
@@ -150,7 +150,7 @@
     if ([url.absoluteString isEqual:self.invokeScheme]) {
         NSString * js = [NSString stringWithFormat:@"%@._messageQueue()", _interfaceName];
         [_webView wb_evaluateJavaScript:js completionHandler:^(NSString * result, NSError * error) {
-            NSArray * queue = [result objectFromJSONString];
+            NSArray * queue = [result wb_objectFromJSONString];
             if ([queue isKindOfClass:[NSArray class]]) {
                 [self processMessageQueue:queue];
             }
