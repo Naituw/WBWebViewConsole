@@ -1,4 +1,4 @@
-# WBWebViewConsole
+# WBWebViewConsole [![Build Status](https://travis-ci.org/Naituw/WBWebViewConsole.svg)](https://travis-ci.org/Naituw/WBWebViewConsole)
 
 WBWebViewConsole is an In-App debug console for your UIWebView && WKWebView
 
