@@ -17,7 +17,7 @@
 
 inline static NSBundle * WBWebBrowserConsoleBundle()
 {
-    return [NSBundle bundleWithPath:[NSString stringWithFormat:@"%@/%@", [NSBundle bundleForClass:[WBWebViewConsole class]], @"WBWebBrowserConsole.bundle"]];
+    return [NSBundle bundleWithPath:[NSString stringWithFormat:@"%@/%@", [NSBundle bundleForClass:[WBWebViewConsole class]].bundlePath, @"WBWebBrowserConsole.bundle"]];
 }
 
 #endif

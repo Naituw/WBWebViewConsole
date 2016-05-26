@@ -12,7 +12,7 @@
 //
 
 #import "WBJSBridgeMessage.h"
-#import <NSDictionary+Accessors/NSDictionary+Accessors.h>
+#import "NSDictionary+WBTTypeCast.h"
 
 @interface WBJSBridgeMessage ()
 
@@ -28,9 +28,9 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dict
 {
     if (self = [self init]) {
-        self.action = [dict stringForKey:@"action"];
-        self.parameters = [dict dictionaryForKey:@"params"];
-        self.callbackID = [dict stringForKey:@"callback_id"];
+        self.action = [dict wbt_stringForKey:@"action"];
+        self.parameters = [dict wbt_dictForKey:@"params"];
+        self.callbackID = [dict wbt_stringForKey:@"callback_id"];
     }
     return self;
 }
