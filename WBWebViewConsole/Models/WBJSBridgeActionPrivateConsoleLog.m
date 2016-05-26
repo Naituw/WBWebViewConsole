@@ -15,7 +15,7 @@
 #import "WBWebViewConsole.h"
 #import "WBWebViewJSBridge.h"
 #import "WBWebView.h"
-#import <NSDictionary+Accessors.h>
+#import "NSDictionary+Accessors.h"
 
 @implementation WBJSBridgeActionPrivateConsoleLog
 
