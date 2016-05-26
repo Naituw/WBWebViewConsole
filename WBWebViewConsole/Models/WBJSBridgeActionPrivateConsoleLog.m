@@ -15,7 +15,7 @@
 #import "WBWebViewConsole.h"
 #import "WBWebViewJSBridge.h"
 #import "WBWebView.h"
-#import "NSDictionary+Accessors.h"
+#import "NSDictionary+WBTTypeCast.h"
 
 @implementation WBJSBridgeActionPrivateConsoleLog
 
@@ -25,13 +25,13 @@
     
     NSDictionary * message = self.message.parameters;
     
-    NSString * func = [message stringForKey:@"func"];
+    NSString * func = [message wbt_stringForKey:@"func"];
     
     if (!func) func = @"log";
     
-    NSString * url = [message stringForKey:@"file"];
-    NSInteger line = [message integerForKey:@"lineno"];
-    NSInteger column = [message integerForKey:@"colno"];
+    NSString * url = [message wbt_stringForKey:@"file"];
+    NSInteger line = [message wbt_integerForKey:@"lineno"];
+    NSInteger column = [message wbt_integerForKey:@"colno"];
     
     if ([func isEqual:@"clear"])
     {
@@ -39,7 +39,7 @@
     }
     else if ([func isEqual:@"assert"])
     {
-        NSArray * args = [message arrayForKey:@"args"];
+        NSArray * args = [message wbt_arrayForKey:@"args"];
         id condition = [args firstObject];
         
         if ([condition isKindOfClass:[NSNumber class]])
@@ -82,7 +82,7 @@
         
         WBWebViewConsoleMessageLevel level = [levelMap[func] integerValue];
         
-        NSArray * args = [message arrayForKey:@"args"];
+        NSArray * args = [message wbt_arrayForKey:@"args"];
         NSString * string = [args componentsJoinedByString:@" "];
         
         [debugConsole addMessage:string type:WBWebViewConsoleMessageTypeLog level:level source:WBWebViewConsoleMessageSourceJS url:url line:line column:column];

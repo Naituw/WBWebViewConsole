@@ -15,7 +15,7 @@
 #import "WBWebView.h"
 #import "WBWebViewConsoleDefines.h"
 #import "NSObject+WBJSONKit.h"
-#import <NSDictionary+Accessors/NSDictionary+Accessors.h>
+#import "NSDictionary+WBTTypeCast.h"
 
 @interface WBWebViewConsoleUserPromptCompletionController ()
 
@@ -66,9 +66,9 @@
             return;
         }
         NSDictionary * resultDict = [result wb_objectFromJSONString];
-        NSArray * suggestions = [resultDict arrayForKey:@"completions"];
-        NSInteger tokenStart = [resultDict integerForKey:@"token_start"];
-        NSInteger tokenEnd = [resultDict integerForKey:@"token_end"];
+        NSArray * suggestions = [resultDict wbt_arrayForKey:@"completions"];
+        NSInteger tokenStart = [resultDict wbt_integerForKey:@"token_start"];
+        NSInteger tokenEnd = [resultDict wbt_integerForKey:@"token_end"];
         
         if (![suggestions isKindOfClass:[NSArray class]] || !suggestions.count)
         {
