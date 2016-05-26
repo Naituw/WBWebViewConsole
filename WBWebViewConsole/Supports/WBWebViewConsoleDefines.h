@@ -13,9 +13,11 @@
 #ifndef WBWebViewConsole_WBWebViewConsoleDefines_h
 #define WBWebViewConsole_WBWebViewConsoleDefines_h
 
+#import "WBWebViewConsole.h"
+
 inline static NSBundle * WBWebBrowserConsoleBundle()
 {
-    return [NSBundle bundleWithPath:[NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] bundlePath], @"WBWebBrowserConsole.bundle"]];
+    return [NSBundle bundleWithPath:[NSString stringWithFormat:@"%@/%@", [NSBundle bundleForClass:[WBWebViewConsole class]], @"WBWebBrowserConsole.bundle"]];
 }
 
 #endif
