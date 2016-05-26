@@ -12,7 +12,7 @@
 //
 
 #import <WebKit/WebKit.h>
-#import <WBWebView.h>
+#import <WBWebViewConsole/WBWebView.h>
 
 @interface WBWKWebView : WKWebView <WBWebView>
 

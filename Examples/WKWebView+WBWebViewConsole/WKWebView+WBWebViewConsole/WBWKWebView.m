@@ -14,7 +14,8 @@
 #import "WBWKWebView.h"
 #import <WBWebViewConsole/WBWebViewJSBridge.h>
 #import <WBWebViewConsole/WBWebViewConsole.h>
-#import <JSONKit.h>
+#import <WBWebViewConsole/NSObject+WBJSONKit.h>
+#import <WBWebViewConsole/WBWebViewUserScript.h>
 
 @interface WBWKWebView () <WKNavigationDelegate>
 
@@ -64,8 +65,8 @@
                 resultString = result;
             } else if ([result respondsToSelector:@selector(stringValue)]) {
                 resultString = [result stringValue];
-            } else if ([result respondsToSelector:@selector(JSONString)]) {
-                resultString = [result JSONString];
+            } else if ([result respondsToSelector:@selector(wb_JSONString)]) {
+                resultString = [result wb_JSONString];
             }
             
             completionHandler(resultString, error);
