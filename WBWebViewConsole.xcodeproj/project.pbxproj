@@ -12,6 +12,29 @@
 		C61EE3491AA5815500449F20 /* NSObject+WBJSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C61EE3481AA5815500449F20 /* NSObject+WBJSONKit.m */; };
 		C656B6681A8DE08900263FC0 /* WBJSBridgeMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C656B6671A8DE08900263FC0 /* WBJSBridgeMessage.m */; };
 		C656B6731A8F682C00263FC0 /* WBJSBridgeActionPrivateConsoleLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C656B6721A8F682C00263FC0 /* WBJSBridgeActionPrivateConsoleLog.m */; };
+		C65B58121E55A5050036AF6A /* NSObject+WBJSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C61EE3481AA5815500449F20 /* NSObject+WBJSONKit.m */; };
+		C65B58131E55A50F0036AF6A /* UIDevice+WBTHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C8E1A8DADAB004F2AD2 /* UIDevice+WBTHelpers.m */; };
+		C65B58141E55A5110036AF6A /* UIColor+WBTHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C941A8DC6C5004F2AD2 /* UIColor+WBTHelpers.m */; };
+		C65B58151E55A5140036AF6A /* UIScrollView+WBTUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C981A8DC84E004F2AD2 /* UIScrollView+WBTUtilities.m */; };
+		C65B58161E55A5190036AF6A /* UIView+WBTSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = C61EE3451AA5807200449F20 /* UIView+WBTSizes.m */; };
+		C65B58171E55A51E0036AF6A /* WBTTypeCastUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D21CBE1CF6EC4000559114 /* WBTTypeCastUtil.m */; };
+		C65B58181E55A5210036AF6A /* NSDictionary+WBTTypeCast.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D21CBB1CF6EC1E00559114 /* NSDictionary+WBTTypeCast.m */; };
+		C65B58191E55A5240036AF6A /* WBKeyboardObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C911A8DC67D004F2AD2 /* WBKeyboardObserver.m */; };
+		C65B581A1E55A5260036AF6A /* WBTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C8B1A8DACEE004F2AD2 /* WBTextView.m */; };
+		C65B581B1E55A52B0036AF6A /* WBWebViewUserScript.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C861A8D9EE9004F2AD2 /* WBWebViewUserScript.m */; };
+		C65B581C1E55A52E0036AF6A /* WBWebViewJSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12CD11A8DD1F6004F2AD2 /* WBWebViewJSBridge.m */; };
+		C65B581D1E55A5310036AF6A /* WBJSBridgeMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C656B6671A8DE08900263FC0 /* WBJSBridgeMessage.m */; };
+		C65B581E1E55A5340036AF6A /* WBJSBridgeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12CD51A8DD275004F2AD2 /* WBJSBridgeAction.m */; };
+		C65B581F1E55A5400036AF6A /* WBWebViewConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C6A1A8D9D64004F2AD2 /* WBWebViewConsole.m */; };
+		C65B58201E55A5400036AF6A /* WBWebViewConsoleInputHistoryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C6C1A8D9D64004F2AD2 /* WBWebViewConsoleInputHistoryEntry.m */; };
+		C65B58211E55A5400036AF6A /* WBWebViewConsoleMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C6E1A8D9D64004F2AD2 /* WBWebViewConsoleMessage.m */; };
+		C65B58221E55A5400036AF6A /* WBJSBridgeActionPrivateConsoleLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C656B6721A8F682C00263FC0 /* WBJSBridgeActionPrivateConsoleLog.m */; };
+		C65B58231E55A5580036AF6A /* WBWebViewConsoleUserPromptCompletionController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C731A8D9D6B004F2AD2 /* WBWebViewConsoleUserPromptCompletionController.m */; };
+		C65B58241E55A5580036AF6A /* WBWebViewConsoleUserPromptCompletionDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C751A8D9D6B004F2AD2 /* WBWebViewConsoleUserPromptCompletionDatasource.m */; };
+		C65B58251E55A55D0036AF6A /* WBWebViewConsoleInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C791A8D9D73004F2AD2 /* WBWebViewConsoleInputView.m */; };
+		C65B58261E55A55D0036AF6A /* WBWebViewConsoleInputViewActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C7B1A8D9D73004F2AD2 /* WBWebViewConsoleInputViewActionButton.m */; };
+		C65B58271E55A55D0036AF6A /* WBWebViewConsoleMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C7D1A8D9D73004F2AD2 /* WBWebViewConsoleMessageCell.m */; };
+		C65B58281E55A5600036AF6A /* WBWebDebugConsoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C671A8D9D5A004F2AD2 /* WBWebDebugConsoleViewController.m */; };
 		C6B12C541A8D9CAB004F2AD2 /* libWBWebViewConsole.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B12C481A8D9CAB004F2AD2 /* libWBWebViewConsole.a */; };
 		C6B12C681A8D9D5A004F2AD2 /* WBWebDebugConsoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C671A8D9D5A004F2AD2 /* WBWebDebugConsoleViewController.m */; };
 		C6B12C6F1A8D9D64004F2AD2 /* WBWebViewConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B12C6A1A8D9D64004F2AD2 /* WBWebViewConsole.m */; };
@@ -470,8 +493,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C65B58211E55A5400036AF6A /* WBWebViewConsoleMessage.m in Sources */,
+				C65B58151E55A5140036AF6A /* UIScrollView+WBTUtilities.m in Sources */,
+				C65B58271E55A55D0036AF6A /* WBWebViewConsoleMessageCell.m in Sources */,
+				C65B58221E55A5400036AF6A /* WBJSBridgeActionPrivateConsoleLog.m in Sources */,
+				C65B58141E55A5110036AF6A /* UIColor+WBTHelpers.m in Sources */,
+				C65B581F1E55A5400036AF6A /* WBWebViewConsole.m in Sources */,
+				C65B581B1E55A52B0036AF6A /* WBWebViewUserScript.m in Sources */,
+				C65B581E1E55A5340036AF6A /* WBJSBridgeAction.m in Sources */,
+				C65B581A1E55A5260036AF6A /* WBTextView.m in Sources */,
+				C65B58161E55A5190036AF6A /* UIView+WBTSizes.m in Sources */,
+				C65B58261E55A55D0036AF6A /* WBWebViewConsoleInputViewActionButton.m in Sources */,
 				C6CC9FC81AA36C9A00518B58 /* WBWebViewJSBridgeTests.m in Sources */,
+				C65B581D1E55A5310036AF6A /* WBJSBridgeMessage.m in Sources */,
+				C65B58181E55A5210036AF6A /* NSDictionary+WBTTypeCast.m in Sources */,
+				C65B58171E55A51E0036AF6A /* WBTTypeCastUtil.m in Sources */,
+				C65B58201E55A5400036AF6A /* WBWebViewConsoleInputHistoryEntry.m in Sources */,
+				C65B58131E55A50F0036AF6A /* UIDevice+WBTHelpers.m in Sources */,
+				C65B58281E55A5600036AF6A /* WBWebDebugConsoleViewController.m in Sources */,
+				C65B58241E55A5580036AF6A /* WBWebViewConsoleUserPromptCompletionDatasource.m in Sources */,
+				C65B58231E55A5580036AF6A /* WBWebViewConsoleUserPromptCompletionController.m in Sources */,
+				C65B58191E55A5240036AF6A /* WBKeyboardObserver.m in Sources */,
+				C65B58121E55A5050036AF6A /* NSObject+WBJSONKit.m in Sources */,
 				C6CC9FCC1AA36D0200518B58 /* WBTestsUIWebView.m in Sources */,
+				C65B58251E55A55D0036AF6A /* WBWebViewConsoleInputView.m in Sources */,
+				C65B581C1E55A52E0036AF6A /* WBWebViewJSBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
