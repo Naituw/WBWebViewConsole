@@ -6,4 +6,4 @@ before_install:
 xcode_project: WBWebViewConsole.xcodeproj
 xcode_scheme: WBWebViewConsole
 xcode_sdk:
-  - iphonesimulator8.1
+  - iphonesimulator9.3
