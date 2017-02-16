@@ -3,4 +3,7 @@ platform :ios, '8.0'
 
 # also demostrates when use as a dynamic framework
 use_frameworks!
-pod 'WBWebViewConsole', :path => '../..'
+
+target 'WKWebView+WBWebViewConsole' do
+	pod 'WBWebViewConsole', :path => '../..'
+end

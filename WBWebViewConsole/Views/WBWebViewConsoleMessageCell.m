@@ -16,6 +16,7 @@
 #import "UIDevice+WBTHelpers.h"
 #import "UIColor+WBTHelpers.h"
 #import "UIView+WBTSizes.h"
+#import "WBWebViewConsoleDefines.h"
 
 @interface WBWebViewConsoleMessageCell ()
 
@@ -236,8 +237,7 @@
     
     if (iconName)
     {
-        iconName = [NSString stringWithFormat:@"WBWebBrowserConsole.bundle/%@.png", iconName];
-        self.iconImageView.image = [UIImage imageNamed:iconName];
+        self.iconImageView.image = [UIImage imageNamed:iconName inBundle:WBWebBrowserConsoleBundle() compatibleWithTraitCollection:nil];
     }
 }
 

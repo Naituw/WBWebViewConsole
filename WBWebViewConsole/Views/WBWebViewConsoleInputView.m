@@ -18,6 +18,7 @@
 #import "WBWebViewConsoleInputViewActionButton.h"
 #import "UIDevice+WBTHelpers.h"
 #import "UIView+WBTSizes.h"
+#import "WBWebViewConsoleDefines.h"
 
 NSUInteger const WBWebViewConsoleInputMaxHistorySize = 30;
 
@@ -68,7 +69,7 @@ NSUInteger const WBWebViewConsoleInputMaxHistorySize = 30;
         
         self.iconImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
         self.iconImageView.contentMode = UIViewContentModeCenter;
-        self.iconImageView.image = [UIImage imageNamed:@"WBWebBrowserConsole.bundle/userinput_prompt.png"];
+        self.iconImageView.image = [UIImage imageNamed:@"userinput_prompt.png" inBundle:WBWebBrowserConsoleBundle() compatibleWithTraitCollection:nil];
         
         [self addSubview:self.iconImageView];
         

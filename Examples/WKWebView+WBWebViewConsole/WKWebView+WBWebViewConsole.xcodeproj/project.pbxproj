@@ -1,1011 +1,508 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>0702CE325E5EB7C25F2951E5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>278B7CCD670529CB58129EE2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C66422FD1A9DCB23009E2FC8</string>
-				<string>6A5DA57ED4B55483BD9BA4BA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>41C8200B86D470125304EF0A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6A5DA57ED4B55483BD9BA4BA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>480AFD5D7DA0222DDA24BBB7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C92E5A75DA7338A918C56B23</string>
-				<string>DDD58014252DD2C76D82E1F6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>65E12EC2171F3CA72255C241</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>6A5DA57ED4B55483BD9BA4BA</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>84DB3917140CB750EF4C8BF2</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>C66422C51A9DC89F009E2FC8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C66422D01A9DC89F009E2FC8</string>
-				<string>C66422EA1A9DC89F009E2FC8</string>
-				<string>C66422CF1A9DC89F009E2FC8</string>
-				<string>480AFD5D7DA0222DDA24BBB7</string>
-				<string>278B7CCD670529CB58129EE2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C66422C61A9DC89F009E2FC8</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0610</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Sina</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>C66422CD1A9DC89F009E2FC8</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.1.1</string>
-					</dict>
-					<key>C66422E61A9DC89F009E2FC8</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.1.1</string>
-						<key>TestTargetID</key>
-						<string>C66422CD1A9DC89F009E2FC8</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>C66422C91A9DC89F009E2FC8</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>C66422C51A9DC89F009E2FC8</string>
-			<key>productRefGroup</key>
-			<string>C66422CF1A9DC89F009E2FC8</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>C66422CD1A9DC89F009E2FC8</string>
-				<string>C66422E61A9DC89F009E2FC8</string>
-			</array>
-		</dict>
-		<key>C66422C91A9DC89F009E2FC8</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C66422EF1A9DC89F009E2FC8</string>
-				<string>C66422F01A9DC89F009E2FC8</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C66422CA1A9DC89F009E2FC8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C66422FC1A9DC99B009E2FC8</string>
-				<string>C66422D71A9DC89F009E2FC8</string>
-				<string>C66422F91A9DC913009E2FC8</string>
-				<string>C66422D41A9DC89F009E2FC8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C66422CB1A9DC89F009E2FC8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C66422FE1A9DCB23009E2FC8</string>
-				<string>41C8200B86D470125304EF0A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C66422CC1A9DC89F009E2FC8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C66422E21A9DC89F009E2FC8</string>
-				<string>C66422DF1A9DC89F009E2FC8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C66422CD1A9DC89F009E2FC8</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>C66422F11A9DC89F009E2FC8</string>
-			<key>buildPhases</key>
-			<array>
-				<string>0702CE325E5EB7C25F2951E5</string>
-				<string>C66422CA1A9DC89F009E2FC8</string>
-				<string>C66422CB1A9DC89F009E2FC8</string>
-				<string>C66422CC1A9DC89F009E2FC8</string>
-				<string>84DB3917140CB750EF4C8BF2</string>
-				<string>65E12EC2171F3CA72255C241</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>WKWebView+WBWebViewConsole</string>
-			<key>productName</key>
-			<string>WKWebView+WBWebViewConsole</string>
-			<key>productReference</key>
-			<string>C66422CE1A9DC89F009E2FC8</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>C66422CE1A9DC89F009E2FC8</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>WKWebView+WBWebViewConsole.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>C66422CF1A9DC89F009E2FC8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C66422CE1A9DC89F009E2FC8</string>
-				<string>C66422E71A9DC89F009E2FC8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C66422D01A9DC89F009E2FC8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C66422D51A9DC89F009E2FC8</string>
-				<string>C66422D61A9DC89F009E2FC8</string>
-				<string>C66422FA1A9DC99B009E2FC8</string>
-				<string>C66422FB1A9DC99B009E2FC8</string>
-				<string>C66422F71A9DC913009E2FC8</string>
-				<string>C66422F81A9DC913009E2FC8</string>
-				<string>C66422DE1A9DC89F009E2FC8</string>
-				<string>C66422E01A9DC89F009E2FC8</string>
-				<string>C66422D11A9DC89F009E2FC8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>WKWebView+WBWebViewConsole</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C66422D11A9DC89F009E2FC8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C66422D21A9DC89F009E2FC8</string>
-				<string>C66422D31A9DC89F009E2FC8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C66422D21A9DC89F009E2FC8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C66422D31A9DC89F009E2FC8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C66422D41A9DC89F009E2FC8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C66422D31A9DC89F009E2FC8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C66422D51A9DC89F009E2FC8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C66422D61A9DC89F009E2FC8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C66422D71A9DC89F009E2FC8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C66422D61A9DC89F009E2FC8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C66422DE1A9DC89F009E2FC8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C66422DF1A9DC89F009E2FC8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C66422DE1A9DC89F009E2FC8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C66422E01A9DC89F009E2FC8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C66422E11A9DC89F009E2FC8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C66422E11A9DC89F009E2FC8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C66422E21A9DC89F009E2FC8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C66422E01A9DC89F009E2FC8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C66422E31A9DC89F009E2FC8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C66422EE1A9DC89F009E2FC8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C66422E41A9DC89F009E2FC8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C66422E51A9DC89F009E2FC8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C66422E61A9DC89F009E2FC8</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>C66422F41A9DC89F009E2FC8</string>
-			<key>buildPhases</key>
-			<array>
-				<string>C66422E31A9DC89F009E2FC8</string>
-				<string>C66422E41A9DC89F009E2FC8</string>
-				<string>C66422E51A9DC89F009E2FC8</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>C66422E91A9DC89F009E2FC8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>WKWebView+WBWebViewConsoleTests</string>
-			<key>productName</key>
-			<string>WKWebView+WBWebViewConsoleTests</string>
-			<key>productReference</key>
-			<string>C66422E71A9DC89F009E2FC8</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>C66422E71A9DC89F009E2FC8</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>WKWebView+WBWebViewConsoleTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>C66422E81A9DC89F009E2FC8</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>C66422C61A9DC89F009E2FC8</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>C66422CD1A9DC89F009E2FC8</string>
-			<key>remoteInfo</key>
-			<string>WKWebView+WBWebViewConsole</string>
-		</dict>
-		<key>C66422E91A9DC89F009E2FC8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>C66422CD1A9DC89F009E2FC8</string>
-			<key>targetProxy</key>
-			<string>C66422E81A9DC89F009E2FC8</string>
-		</dict>
-		<key>C66422EA1A9DC89F009E2FC8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C66422ED1A9DC89F009E2FC8</string>
-				<string>C66422EB1A9DC89F009E2FC8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>WKWebView+WBWebViewConsoleTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C66422EB1A9DC89F009E2FC8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C66422EC1A9DC89F009E2FC8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C66422EC1A9DC89F009E2FC8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C66422ED1A9DC89F009E2FC8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>WKWebView_WBWebViewConsoleTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C66422EE1A9DC89F009E2FC8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C66422ED1A9DC89F009E2FC8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C66422EF1A9DC89F009E2FC8</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C66422F01A9DC89F009E2FC8</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C66422F11A9DC89F009E2FC8</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C66422F21A9DC89F009E2FC8</string>
-				<string>C66422F31A9DC89F009E2FC8</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C66422F21A9DC89F009E2FC8</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C92E5A75DA7338A918C56B23</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>WKWebView+WBWebViewConsole/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C66422F31A9DC89F009E2FC8</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>DDD58014252DD2C76D82E1F6</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>WKWebView+WBWebViewConsole/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C66422F41A9DC89F009E2FC8</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C66422F51A9DC89F009E2FC8</string>
-				<string>C66422F61A9DC89F009E2FC8</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C66422F51A9DC89F009E2FC8</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>WKWebView+WBWebViewConsoleTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/WKWebView+WBWebViewConsole.app/WKWebView+WBWebViewConsole</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C66422F61A9DC89F009E2FC8</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>WKWebView+WBWebViewConsoleTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/WKWebView+WBWebViewConsole.app/WKWebView+WBWebViewConsole</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C66422F71A9DC913009E2FC8</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>WBWebViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C66422F81A9DC913009E2FC8</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>WBWebViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C66422F91A9DC913009E2FC8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C66422F81A9DC913009E2FC8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C66422FA1A9DC99B009E2FC8</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>WBWKWebView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C66422FB1A9DC99B009E2FC8</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>WBWKWebView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C66422FC1A9DC99B009E2FC8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C66422FB1A9DC99B009E2FC8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C66422FD1A9DCB23009E2FC8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>WebKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/WebKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>C66422FE1A9DCB23009E2FC8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C66422FD1A9DCB23009E2FC8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C92E5A75DA7338A918C56B23</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DDD58014252DD2C76D82E1F6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>C66422C61A9DC89F009E2FC8</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C66422D41A9DC89F009E2FC8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C66422D31A9DC89F009E2FC8 /* main.m */; };
+		C66422D71A9DC89F009E2FC8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C66422D61A9DC89F009E2FC8 /* AppDelegate.m */; };
+		C66422DF1A9DC89F009E2FC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C66422DE1A9DC89F009E2FC8 /* Images.xcassets */; };
+		C66422E21A9DC89F009E2FC8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C66422E01A9DC89F009E2FC8 /* LaunchScreen.xib */; };
+		C66422EE1A9DC89F009E2FC8 /* WKWebView_WBWebViewConsoleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C66422ED1A9DC89F009E2FC8 /* WKWebView_WBWebViewConsoleTests.m */; };
+		C66422F91A9DC913009E2FC8 /* WBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66422F81A9DC913009E2FC8 /* WBWebViewController.m */; };
+		C66422FC1A9DC99B009E2FC8 /* WBWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = C66422FB1A9DC99B009E2FC8 /* WBWKWebView.m */; };
+		C66422FE1A9DCB23009E2FC8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66422FD1A9DCB23009E2FC8 /* WebKit.framework */; };
+		F9F5BE1A648BBF7FE2A44B76 /* Pods_WKWebView_WBWebViewConsole.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04676ED015DCB0894E97A2C9 /* Pods_WKWebView_WBWebViewConsole.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C66422E81A9DC89F009E2FC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C66422C61A9DC89F009E2FC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C66422CD1A9DC89F009E2FC8;
+			remoteInfo = "WKWebView+WBWebViewConsole";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04676ED015DCB0894E97A2C9 /* Pods_WKWebView_WBWebViewConsole.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WKWebView_WBWebViewConsole.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28ABF5454F9D30CE260B3E24 /* Pods-WKWebView+WBWebViewConsole.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKWebView+WBWebViewConsole.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WKWebView+WBWebViewConsole/Pods-WKWebView+WBWebViewConsole.debug.xcconfig"; sourceTree = "<group>"; };
+		6A5DA57ED4B55483BD9BA4BA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		716283BEC71883A99C46D000 /* Pods-WKWebView+WBWebViewConsole.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKWebView+WBWebViewConsole.release.xcconfig"; path = "Pods/Target Support Files/Pods-WKWebView+WBWebViewConsole/Pods-WKWebView+WBWebViewConsole.release.xcconfig"; sourceTree = "<group>"; };
+		C66422CE1A9DC89F009E2FC8 /* WKWebView+WBWebViewConsole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WKWebView+WBWebViewConsole.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C66422D21A9DC89F009E2FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C66422D31A9DC89F009E2FC8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C66422D51A9DC89F009E2FC8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C66422D61A9DC89F009E2FC8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C66422DE1A9DC89F009E2FC8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C66422E11A9DC89F009E2FC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C66422E71A9DC89F009E2FC8 /* WKWebView+WBWebViewConsoleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WKWebView+WBWebViewConsoleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C66422EC1A9DC89F009E2FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C66422ED1A9DC89F009E2FC8 /* WKWebView_WBWebViewConsoleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebView_WBWebViewConsoleTests.m; sourceTree = "<group>"; };
+		C66422F71A9DC913009E2FC8 /* WBWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBWebViewController.h; sourceTree = "<group>"; };
+		C66422F81A9DC913009E2FC8 /* WBWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWebViewController.m; sourceTree = "<group>"; };
+		C66422FA1A9DC99B009E2FC8 /* WBWKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBWKWebView.h; sourceTree = "<group>"; };
+		C66422FB1A9DC99B009E2FC8 /* WBWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBWKWebView.m; sourceTree = "<group>"; };
+		C66422FD1A9DCB23009E2FC8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C66422CB1A9DC89F009E2FC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66422FE1A9DCB23009E2FC8 /* WebKit.framework in Frameworks */,
+				F9F5BE1A648BBF7FE2A44B76 /* Pods_WKWebView_WBWebViewConsole.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C66422E41A9DC89F009E2FC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		278B7CCD670529CB58129EE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C66422FD1A9DCB23009E2FC8 /* WebKit.framework */,
+				6A5DA57ED4B55483BD9BA4BA /* Pods.framework */,
+				04676ED015DCB0894E97A2C9 /* Pods_WKWebView_WBWebViewConsole.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87F07C09A992970AC8EB3A3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				28ABF5454F9D30CE260B3E24 /* Pods-WKWebView+WBWebViewConsole.debug.xcconfig */,
+				716283BEC71883A99C46D000 /* Pods-WKWebView+WBWebViewConsole.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C66422C51A9DC89F009E2FC8 = {
+			isa = PBXGroup;
+			children = (
+				C66422D01A9DC89F009E2FC8 /* WKWebView+WBWebViewConsole */,
+				C66422EA1A9DC89F009E2FC8 /* WKWebView+WBWebViewConsoleTests */,
+				C66422CF1A9DC89F009E2FC8 /* Products */,
+				278B7CCD670529CB58129EE2 /* Frameworks */,
+				87F07C09A992970AC8EB3A3A /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		C66422CF1A9DC89F009E2FC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C66422CE1A9DC89F009E2FC8 /* WKWebView+WBWebViewConsole.app */,
+				C66422E71A9DC89F009E2FC8 /* WKWebView+WBWebViewConsoleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C66422D01A9DC89F009E2FC8 /* WKWebView+WBWebViewConsole */ = {
+			isa = PBXGroup;
+			children = (
+				C66422D51A9DC89F009E2FC8 /* AppDelegate.h */,
+				C66422D61A9DC89F009E2FC8 /* AppDelegate.m */,
+				C66422FA1A9DC99B009E2FC8 /* WBWKWebView.h */,
+				C66422FB1A9DC99B009E2FC8 /* WBWKWebView.m */,
+				C66422F71A9DC913009E2FC8 /* WBWebViewController.h */,
+				C66422F81A9DC913009E2FC8 /* WBWebViewController.m */,
+				C66422DE1A9DC89F009E2FC8 /* Images.xcassets */,
+				C66422E01A9DC89F009E2FC8 /* LaunchScreen.xib */,
+				C66422D11A9DC89F009E2FC8 /* Supporting Files */,
+			);
+			path = "WKWebView+WBWebViewConsole";
+			sourceTree = "<group>";
+		};
+		C66422D11A9DC89F009E2FC8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C66422D21A9DC89F009E2FC8 /* Info.plist */,
+				C66422D31A9DC89F009E2FC8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C66422EA1A9DC89F009E2FC8 /* WKWebView+WBWebViewConsoleTests */ = {
+			isa = PBXGroup;
+			children = (
+				C66422ED1A9DC89F009E2FC8 /* WKWebView_WBWebViewConsoleTests.m */,
+				C66422EB1A9DC89F009E2FC8 /* Supporting Files */,
+			);
+			path = "WKWebView+WBWebViewConsoleTests";
+			sourceTree = "<group>";
+		};
+		C66422EB1A9DC89F009E2FC8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C66422EC1A9DC89F009E2FC8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C66422CD1A9DC89F009E2FC8 /* WKWebView+WBWebViewConsole */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C66422F11A9DC89F009E2FC8 /* Build configuration list for PBXNativeTarget "WKWebView+WBWebViewConsole" */;
+			buildPhases = (
+				58A560DF98952F82F4328B93 /* [CP] Check Pods Manifest.lock */,
+				C66422CA1A9DC89F009E2FC8 /* Sources */,
+				C66422CB1A9DC89F009E2FC8 /* Frameworks */,
+				C66422CC1A9DC89F009E2FC8 /* Resources */,
+				0D8942CD3F2BC29681A47249 /* [CP] Embed Pods Frameworks */,
+				CB28E3162E5CF17C11D5850D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WKWebView+WBWebViewConsole";
+			productName = "WKWebView+WBWebViewConsole";
+			productReference = C66422CE1A9DC89F009E2FC8 /* WKWebView+WBWebViewConsole.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C66422E61A9DC89F009E2FC8 /* WKWebView+WBWebViewConsoleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C66422F41A9DC89F009E2FC8 /* Build configuration list for PBXNativeTarget "WKWebView+WBWebViewConsoleTests" */;
+			buildPhases = (
+				C66422E31A9DC89F009E2FC8 /* Sources */,
+				C66422E41A9DC89F009E2FC8 /* Frameworks */,
+				C66422E51A9DC89F009E2FC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C66422E91A9DC89F009E2FC8 /* PBXTargetDependency */,
+			);
+			name = "WKWebView+WBWebViewConsoleTests";
+			productName = "WKWebView+WBWebViewConsoleTests";
+			productReference = C66422E71A9DC89F009E2FC8 /* WKWebView+WBWebViewConsoleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C66422C61A9DC89F009E2FC8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Sina;
+				TargetAttributes = {
+					C66422CD1A9DC89F009E2FC8 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					C66422E61A9DC89F009E2FC8 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = C66422CD1A9DC89F009E2FC8;
+					};
+				};
+			};
+			buildConfigurationList = C66422C91A9DC89F009E2FC8 /* Build configuration list for PBXProject "WKWebView+WBWebViewConsole" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C66422C51A9DC89F009E2FC8;
+			productRefGroup = C66422CF1A9DC89F009E2FC8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C66422CD1A9DC89F009E2FC8 /* WKWebView+WBWebViewConsole */,
+				C66422E61A9DC89F009E2FC8 /* WKWebView+WBWebViewConsoleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C66422CC1A9DC89F009E2FC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66422E21A9DC89F009E2FC8 /* LaunchScreen.xib in Resources */,
+				C66422DF1A9DC89F009E2FC8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C66422E51A9DC89F009E2FC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D8942CD3F2BC29681A47249 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WKWebView+WBWebViewConsole/Pods-WKWebView+WBWebViewConsole-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58A560DF98952F82F4328B93 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CB28E3162E5CF17C11D5850D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WKWebView+WBWebViewConsole/Pods-WKWebView+WBWebViewConsole-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C66422CA1A9DC89F009E2FC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66422FC1A9DC99B009E2FC8 /* WBWKWebView.m in Sources */,
+				C66422D71A9DC89F009E2FC8 /* AppDelegate.m in Sources */,
+				C66422F91A9DC913009E2FC8 /* WBWebViewController.m in Sources */,
+				C66422D41A9DC89F009E2FC8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C66422E31A9DC89F009E2FC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66422EE1A9DC89F009E2FC8 /* WKWebView_WBWebViewConsoleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C66422E91A9DC89F009E2FC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C66422CD1A9DC89F009E2FC8 /* WKWebView+WBWebViewConsole */;
+			targetProxy = C66422E81A9DC89F009E2FC8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C66422E01A9DC89F009E2FC8 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C66422E11A9DC89F009E2FC8 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C66422EF1A9DC89F009E2FC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C66422F01A9DC89F009E2FC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C66422F21A9DC89F009E2FC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28ABF5454F9D30CE260B3E24 /* Pods-WKWebView+WBWebViewConsole.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "WKWebView+WBWebViewConsole/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C66422F31A9DC89F009E2FC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 716283BEC71883A99C46D000 /* Pods-WKWebView+WBWebViewConsole.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "WKWebView+WBWebViewConsole/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C66422F51A9DC89F009E2FC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WKWebView+WBWebViewConsoleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WKWebView+WBWebViewConsole.app/WKWebView+WBWebViewConsole";
+			};
+			name = Debug;
+		};
+		C66422F61A9DC89F009E2FC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WKWebView+WBWebViewConsoleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WKWebView+WBWebViewConsole.app/WKWebView+WBWebViewConsole";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C66422C91A9DC89F009E2FC8 /* Build configuration list for PBXProject "WKWebView+WBWebViewConsole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C66422EF1A9DC89F009E2FC8 /* Debug */,
+				C66422F01A9DC89F009E2FC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C66422F11A9DC89F009E2FC8 /* Build configuration list for PBXNativeTarget "WKWebView+WBWebViewConsole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C66422F21A9DC89F009E2FC8 /* Debug */,
+				C66422F31A9DC89F009E2FC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C66422F41A9DC89F009E2FC8 /* Build configuration list for PBXNativeTarget "WKWebView+WBWebViewConsoleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C66422F51A9DC89F009E2FC8 /* Debug */,
+				C66422F61A9DC89F009E2FC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C66422C61A9DC89F009E2FC8 /* Project object */;
+}

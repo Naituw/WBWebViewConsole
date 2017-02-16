@@ -14,6 +14,7 @@
 #import "WBWebViewConsoleInputViewActionButton.h"
 #import "UIColor+WBTHelpers.h"
 #import "UIView+WBTSizes.h"
+#import "WBWebViewConsoleDefines.h"
 
 @interface WBWebViewConsoleInputActionPanel : UIImageView
 
@@ -49,7 +50,7 @@
 {
     if (self = [super initWithFrame:frame])
     {
-        self.iconImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"WBWebBrowserConsole.bundle/userinput_actions.png"]];
+        self.iconImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"userinput_actions.png" inBundle:WBWebBrowserConsoleBundle() compatibleWithTraitCollection:nil]];
         self.iconImageView.contentMode = UIViewContentModeCenter;
         
         [self addSubview:self.iconImageView];
@@ -173,7 +174,7 @@
     {
         self.actionButton = actionButton;
         
-        self.image = [[UIImage imageNamed:@"WBWebBrowserConsole.bundle/userinput_action_panel.png"] stretchableImageWithLeftCapWidth:25 topCapHeight:25];
+        self.image = [[UIImage imageNamed:@"userinput_action_panel.png" inBundle:WBWebBrowserConsoleBundle() compatibleWithTraitCollection:nil] stretchableImageWithLeftCapWidth:25 topCapHeight:25];
         
         NSMutableArray * buttons = [NSMutableArray array];
         
