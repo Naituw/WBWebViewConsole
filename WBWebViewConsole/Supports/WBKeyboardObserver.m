@@ -19,8 +19,6 @@ NSString * const WBKeyboardObserverFrameDidUpdateNotification = @"WBKeyboardObse
 
 + (void)load
 {
-    [super load];
-    
     [WBKeyboardObserver sharedObserver];
 }
 
