@@ -37,6 +37,17 @@
     return self;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame configuration:(WKWebViewConfiguration *)configuration {
+
+    if (self = [super initWithFrame:frame configuration:configuration]) {
+        self.navigationDelegate = self;
+        self.JSBridge = [[WBWebViewJSBridge alloc] initWithWebView:self];
+
+        self.console = [[WBWebViewConsole alloc] initWithWebView:self];
+    }
+    return self;
+}
+
 - (void)wb_addUserScript:(WBWebViewUserScript *)userScript
 {
     if (!userScript) {
