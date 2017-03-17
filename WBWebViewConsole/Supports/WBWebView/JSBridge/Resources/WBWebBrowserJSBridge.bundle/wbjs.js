@@ -73,6 +73,9 @@
                 }
 
                 var callback = _callbacks[callbackID];
+                if (!callback) {
+                    return;
+                }
 
                 if (callback) {
                     var params = message.params;
