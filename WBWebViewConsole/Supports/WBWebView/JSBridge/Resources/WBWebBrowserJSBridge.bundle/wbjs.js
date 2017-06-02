@@ -1,4 +1,4 @@
-/** 
+/**
  *  Copyright (c) 2014-present, Weibo, Corp.
  *  All rights reserved.
  *
@@ -23,7 +23,7 @@
                 document.dispatchEvent(readyEvent);
             }
         }
-    } (this, function () {
+    }(this, function () {
 
         var _callbacks = [];
         var _callbackIndex = 1000;
@@ -51,10 +51,21 @@
                     action: name,
                     params: params,
                     callback_id: callbackID
-                }
+                };
 
                 _messageQueue.push(message);
-                location.href = _invokeScheme;
+                // Listen for DOMContentLoaded and notify our channel subscribers.
+                if (document.readyState == 'complete' || document.readyState == 'interactive') {
+                    location.href = _invokeScheme;
+                } else {
+                    document.addEventListener('DOMContentLoaded', function () {
+                        if(_messageQueue.length > 0) {
+                                setTimeout(function(){
+                                    location.href = _invokeScheme;
+                                }, 3000);
+                        }
+                    }, false);
+                }
             },
 
             _messageQueue: function () {
@@ -77,7 +88,7 @@
                 if (callback) {
                     var params = message.params;
                     var success = !message.failed;
-                   
+
                     callback(params, success);
                 }
             }
