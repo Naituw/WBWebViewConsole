@@ -60,7 +60,9 @@
                 } else {
                     document.addEventListener('DOMContentLoaded', function () {
                         if(_messageQueue.length > 0) {
-                            location.href = _invokeScheme;
+                                setTimeout(function(){
+                                    location.href = _invokeScheme;
+                                }, 3000);
                         }
                     }, false);
                 }
