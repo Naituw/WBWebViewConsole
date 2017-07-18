@@ -251,6 +251,7 @@ NSUInteger const WBWebViewConsoleInputMaxHistorySize = 30;
     if (!_promptCompletionTableView)
     {
         _promptCompletionTableView = [[UITableView alloc] initWithFrame:CGRectZero];
+        _promptCompletionTableView.estimatedRowHeight = 36;
         _promptCompletionTableView.delegate = self.promptCompletionDatasource;
         _promptCompletionTableView.dataSource = self.promptCompletionDatasource;
         _promptCompletionTableView.bounces = NO;
@@ -275,7 +276,7 @@ NSUInteger const WBWebViewConsoleInputMaxHistorySize = 30;
     
     CGRect frameInWindow = [self.window convertRect:self.bounds fromView:self];
     
-    self.promptCompletionTableView.frame = CGRectMake(0, CGRectGetMinY(frameInWindow) - height, CGRectGetWidth(frameInWindow), height);
+    self.promptCompletionTableView.frame = CGRectMake(CGRectGetMinX(frameInWindow), CGRectGetMinY(frameInWindow) - height, CGRectGetWidth(frameInWindow), height);
 }
 
 - (void)updatePromptCompletionWithSuggestions:(NSArray *)suggestions replacementRange:(NSRange)replacementRange
