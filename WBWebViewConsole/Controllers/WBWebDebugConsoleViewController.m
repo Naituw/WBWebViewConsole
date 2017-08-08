@@ -20,16 +20,13 @@
 #import "WBKeyboardObserver.h"
 
 @interface WBWebDebugConsoleViewController () <UITableViewDataSource, UITableViewDelegate, WBWebViewConsoleInputViewDelegate, WBWebViewConsoleMessageCellDelegate>
-{
-    struct {
-        unsigned int viewAppeared: 1;
-    } _flags;
-}
 
 @property (nonatomic, strong) WBWebViewConsole * console;
 @property (nonatomic, strong) UITableView * tableView;
 @property (nonatomic, strong) WBWebViewConsoleInputView * inputView;
 
+@property (nonatomic, strong) NSLayoutConstraint * inputViewHeightConstraint;
+@property (nonatomic, strong) NSLayoutConstraint * bottomConstraint;
 @end
 
 @implementation WBWebDebugConsoleViewController
@@ -60,6 +57,7 @@
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
+    self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.tableView];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Clear", nil) style:UIBarButtonItemStylePlain target:self action:@selector(clearMessages)];
@@ -68,33 +66,26 @@
     [self.inputView setDelegate:self];
     [self.inputView setFont:[WBWebViewConsoleMessageCell messageFont]];
     [self.inputView setConsole:self.console];
+    self.inputView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.inputView];
+    
+    NSMutableArray *constraints = [[NSMutableArray alloc] init];
+    [constraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tableView]|" options:0 metrics:nil views:@{@"tableView":self.tableView}]];
+    [constraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[inputView]|" options:0 metrics:nil views:@{@"inputView":self.inputView}]];
+    [constraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tableView][inputView]" options:0 metrics:nil views:@{@"tableView":self.tableView, @"inputView":self.inputView}]];
+    [NSLayoutConstraint activateConstraints:constraints];
+    
+    self.inputViewHeightConstraint = [NSLayoutConstraint constraintWithItem:self.inputView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:self.inputView.desiredHeight];
+    self.inputViewHeightConstraint.active = YES;
+    
+    self.bottomConstraint = [NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.inputView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
+    self.bottomConstraint.active = YES;
     
     if (self.initialCommand.length)
     {
         [self.inputView setText:self.initialCommand];
         [self.inputView.textView becomeFirstResponder];
     }
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self relayoutViewsAnimated:NO];
-        
-        _flags.viewAppeared = YES;
-    });
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        _flags.viewAppeared = NO;
-    });
 }
 
 - (void)dismiss:(id)sender
@@ -126,27 +117,19 @@
     return MAX([UIScreen mainScreen].bounds.size.height - endFrame.origin.y, 0);
 }
 
-- (void)relayoutViewsAnimated:(BOOL)animated
-{
+- (void)viewDidLayoutSubviews {
+    //    [self.view setNeedsUpdateConstraints];
     CGFloat keyboardHeight = [self keyboardHeight];
-    CGFloat inputViewHeight = self.inputView.desiredHeight;
     
-    if (animated)
-    {
-        WBKeyboardObserver * keyboard = [WBKeyboardObserver sharedObserver];
-        
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationCurve:keyboard.animationCurve];
-        [UIView setAnimationDuration:keyboard.animationDuration ? : 0.15];
-    }
+    CGRect absolutePosition = [self.view convertRect:self.view.bounds toView:self.view.window];
     
-    self.inputView.frame = CGRectMake(0, self.view.wbtHeight - inputViewHeight - keyboardHeight, self.view.wbtWidth, inputViewHeight);
-    self.tableView.frame = CGRectMake(0, 0, self.view.wbtWidth, self.view.wbtHeight - inputViewHeight - keyboardHeight);
+    CGFloat bottomHeight = CGRectGetMaxY(absolutePosition);
     
-    if (animated)
-    {
-        [UIView commitAnimations];
-    }
+    [self.view layoutIfNeeded];
+    [UIView animateWithDuration:0.25 animations:^{
+        self.bottomConstraint.constant = MAX(bottomHeight - (self.view.window.wbtHeight - keyboardHeight), 0);
+        [self.view layoutIfNeeded];
+    }];
 }
 
 #pragma mark - TableView Datasource
@@ -291,7 +274,7 @@
 
 - (void)consoleInputViewHeightChanged:(WBWebViewConsoleInputView *)inputView
 {
-    [self relayoutViewsAnimated:_flags.viewAppeared];
+    self.inputViewHeightConstraint.constant = self.inputView.desiredHeight;
 }
 
 - (void)consoleInputViewDidBeginEditing:(WBWebViewConsoleInputView *)inputView
@@ -308,7 +291,16 @@
 
 - (void)keyboardFrameDidChangeNotification:(NSNotification *)notification
 {
-    [self relayoutViewsAnimated:YES];
+    CGFloat keyboardHeight = [self keyboardHeight];
+    
+    CGRect absolutePosition = [self.view convertRect:self.view.bounds toView:self.view.window];
+    
+    CGFloat bottomHeight = CGRectGetMaxY(absolutePosition);
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        self.bottomConstraint.constant = MAX(bottomHeight - (self.view.window.wbtHeight - keyboardHeight), 0);
+        [self.view layoutIfNeeded];
+    }];
 }
 
 @end
